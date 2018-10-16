@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[BodyParts]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] NVARCHAR(MAX) NOT NULL 
+)

@@ -1,0 +1,1264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Camera_adjustOverlay" xml:space="preserve">
+    <value>Adjust Overlay</value>
+  </data>
+  <data name="Camera_hideSlider" xml:space="preserve">
+    <value>Hide Slider</value>
+  </data>
+  <data name="Camera_permissionReq" xml:space="preserve">
+    <value>Camera permission is required!</value>
+  </data>
+  <data name="Camera_tip1_message" xml:space="preserve">
+    <value>The best photos will be well lit and have a good amount of contrast between your skin and the background.
+Try to make sure that you'll be able to replicate these shot conditions each time!</value>
+  </data>
+  <data name="Camera_tip1_title" xml:space="preserve">
+    <value>Photo-Taking Tips #1</value>
+  </data>
+  <data name="Camera_tip2_message" xml:space="preserve">
+    <value>Taking subsequent photos of a condition will overlay the first image you took. Try to line up your new shot with the overlay to be as consistent as possible!
+You can adjust the visibilty of the overlay by pressing the 'Adjust Overlay' button.</value>
+  </data>
+  <data name="Camera_tip2_title" xml:space="preserve">
+    <value>Photo-Taking Tips #2</value>
+  </data>
+  <data name="Camera_title" xml:space="preserve">
+    <value>Take a Photo</value>
+  </data>
+  <data name="ChangePass_confirmPass" xml:space="preserve">
+    <value>Confirm new password:</value>
+  </data>
+  <data name="ChangePass_confirmPassTemp" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="ChangePass_currentPass" xml:space="preserve">
+    <value>Your current password:</value>
+  </data>
+  <data name="ChangePass_currentPassTemp" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="ChangePass_error" xml:space="preserve">
+    <value>Password Change Error</value>
+  </data>
+  <data name="ChangePass_newPass" xml:space="preserve">
+    <value>Your new password</value>
+  </data>
+  <data name="ChangePass_newPassTemp" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="ChangePass_successMessage" xml:space="preserve">
+    <value>Your password has been changed. Please log in again.</value>
+  </data>
+  <data name="ChangePass_successTitle" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="ChangePass_title" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="ConditionEdit_blurbEdit" xml:space="preserve">
+    <value>Alter the information below as needed and then tap the tick in the upper right to confirm your changes.</value>
+  </data>
+  <data name="ConditionEdit_blurbNew" xml:space="preserve">
+    <value>To start tracking a new skin condition, select its body part and skin region. Noting the current treatment method and issue start-date will help you monitor the condition's progress.</value>
+  </data>
+  <data name="ConditionEdit_bodyPart" xml:space="preserve">
+    <value>Body part</value>
+  </data>
+  <data name="ConditionEdit_bodyPartHead" xml:space="preserve">
+    <value>Choose a body part:</value>
+  </data>
+  <data name="ConditionEdit_conditionName" xml:space="preserve">
+    <value>Condition Name</value>
+  </data>
+  <data name="ConditionEdit_conditionNameError" xml:space="preserve">
+    <value>Please name the condition.</value>
+  </data>
+  <data name="ConditionEdit_conditionNameHead" xml:space="preserve">
+    <value>What is the name of this condition?</value>
+  </data>
+  <data name="ConditionEdit_confirm" xml:space="preserve">
+    <value>Add the condition '{0}' as being on your {1}? You can edit these details later.</value>
+    <comment>{0} - Condition name
+{1} - Skin Region name</comment>
+  </data>
+  <data name="ConditionEdit_confirmTitle" xml:space="preserve">
+    <value>Confirm New Condition</value>
+  </data>
+  <data name="ConditionEdit_delete" xml:space="preserve">
+    <value>Delete Condition</value>
+  </data>
+  <data name="ConditionEdit_deleteError" xml:space="preserve">
+    <value>There was an error while deleting your condition - please try again later.</value>
+  </data>
+  <data name="ConditionEdit_deleteSuccessMessage" xml:space="preserve">
+    <value>Condition deleted successfully!</value>
+  </data>
+  <data name="ConditionEdit_deleteSuccessTitle" xml:space="preserve">
+    <value>Deletion Complete</value>
+  </data>
+  <data name="ConditionEdit_deleteWarningMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this condition and all photos associated with it? This action cannot be undone!</value>
+  </data>
+  <data name="ConditionEdit_deleteWarningTitle" xml:space="preserve">
+    <value>Delete Condition?</value>
+  </data>
+  <data name="ConditionEdit_finished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="ConditionEdit_markFinished" xml:space="preserve">
+    <value>Mark as finished:</value>
+  </data>
+  <data name="ConditionEdit_passcode" xml:space="preserve">
+    <value>Require passcode:</value>
+  </data>
+  <data name="ConditionEdit_reminderEnabled" xml:space="preserve">
+    <value>Enable reminders:</value>
+  </data>
+  <data name="ConditionEdit_reminderFreq" xml:space="preserve">
+    <value>Reminder Frequency</value>
+  </data>
+  <data name="ConditionEdit_skinRegion" xml:space="preserve">
+    <value>Skin Region</value>
+  </data>
+  <data name="ConditionEdit_skinRegionHead" xml:space="preserve">
+    <value>Choose a skin region within that area:</value>
+  </data>
+  <data name="ConditionEdit_startDate" xml:space="preserve">
+    <value>When did the issue start?</value>
+  </data>
+  <data name="ConditionEdit_submitError" xml:space="preserve">
+    <value>There was an error while attempting to submit the new condition:
+</value>
+  </data>
+  <data name="ConditionEdit_titleEdit" xml:space="preserve">
+    <value>Editing '{0}'</value>
+    <comment>{0} - existing.Condition</comment>
+  </data>
+  <data name="ConditionEdit_titleNew" xml:space="preserve">
+    <value>Add New Condition</value>
+  </data>
+  <data name="ConditionEdit_updateError" xml:space="preserve">
+    <value>There was an error while updating the condition - please try again later.</value>
+  </data>
+  <data name="ConditionEdit_updateSuccess" xml:space="preserve">
+    <value>Condition updated successfully!</value>
+  </data>
+  <data name="CreateAcc_btn_submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+    <data name="CreateAcc_btn_privacy" xml:space="preserve">
+    <value>View Privacy Policy</value>
+  </data>
+    <data name="CreateAcc_btn_terms" xml:space="preserve">
+    <value>View Terms of Use</value>
+  </data>
+    <data name="CreateAcc_termsPrivacyCheck" xml:space="preserve">
+    <value>I have read and agree to both the Privacy Policy and Terms of Use</value>
+  </data>
+    <data name="CreateAcc_termsPrivacyFail" xml:space="preserve">
+    <value>Please confirm that you have read and agree with the Terms of Use and Privacy Policy</value>
+  </data>
+  <data name="CreateAcc_confirmMessage" xml:space="preserve">
+    <value>By pressing agree you confirm:
+
+I know that this app is not a replacement for professional treatment or advice and that if I have concerns about my skin I should seek advice or a diagnosis from my GP.
+</value>
+  </data>
+  <data name="CreateAcc_confirmTitle" xml:space="preserve">
+    <value>Please Confirm</value>
+  </data>
+  <data name="CreateAcc_dob" xml:space="preserve">
+    <value>Your date of birth:</value>
+  </data>
+  <data name="CreateAcc_email" xml:space="preserve">
+    <value>Email address:</value>
+  </data>
+  <data name="CreateAcc_emailTemp" xml:space="preserve">
+    <value>email@example.com</value>
+  </data>
+  <data name="CreateAcc_errorTitle" xml:space="preserve">
+    <value>Account Create Error</value>
+  </data>
+  <data name="CreateAcc_name" xml:space="preserve">
+    <value>Your full name:</value>
+  </data>
+  <data name="CreateAcc_nameTemp" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CreateAcc_password" xml:space="preserve">
+    <value>Your password:</value>
+  </data>
+  <data name="CreateAcc_passwordConfirm" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="CreateAcc_passwordMismatchMessage" xml:space="preserve">
+    <value>Oops! Make sure your password is entered correctly!</value>
+  </data>
+  <data name="CreateAcc_passwordMismatchTitle" xml:space="preserve">
+    <value>Passwords don't match!</value>
+  </data>
+    <data name="CreateAcc_passwordEmpty" xml:space="preserve">
+    <value>Please enter a password.</value>
+  </data>
+  <data name="CreateAcc_passwordEmptyTitle" xml:space="preserve">
+    <value>Missing Password</value>
+  </data>
+    
+  <data name="CreateAcc_passwordTemp" xml:space="preserve">
+    <value>Your password</value>
+  </data>
+  <data name="CreateAcc_successMessage" xml:space="preserve">
+    <value>Your account has been successfully created!
+An email has been sent to {0} with a confirmation link - please click it to let us know that the email address is genuine.</value>
+    <comment>{0} - user's email</comment>
+  </data>
+  <data name="CreateAcc_successTitle" xml:space="preserve">
+    <value>Welcome!</value>
+  </data>
+  <data name="CreateAcc_title" xml:space="preserve">
+    <value>Create a new account</value>
+  </data>
+  <data name="Dialog_agree" xml:space="preserve">
+    <value>I Agree</value>
+  </data>
+  <data name="Dialog_cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Dialog_cancelled" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="Dialog_confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Dialog_delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Dialog_error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Dialog_loading" xml:space="preserve">
+    <value>One moment...</value>
+  </data>
+  <data name="Dialog_success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Dialog_understand" xml:space="preserve">
+    <value>Got it</value>
+  </data>
+  <data name="Disclaimer_appIntent" xml:space="preserve">
+    <value>This app is designed to help you monitor your skin conditions and lesions. If you have concerns about your skin, seek advice or a diagnosis from your GP or Dermatologist.</value>
+  </data>
+  <data name="Disclaimer_btn_agree" xml:space="preserve">
+    <value>I Understand &amp; Agree</value>
+  </data>
+  <data name="Disclaimer_imageControl" xml:space="preserve">
+    <value>The images taken with this app are securely stored on the MySkinSelfie server and away from other images on your device, meaning that others won't stumble onto them in your gallery/camera roll. You're in control of who can see your photos and can delete them at any time.</value>
+  </data>
+  <data name="Disclaimer_notTreatment" xml:space="preserve">
+    <value>This app is not a replacement for professional treatment or advice!</value>
+  </data>
+  <data name="Disclaimer_thanks" xml:space="preserve">
+    <value>Thanks for downloading MySkinSelfie!</value>
+  </data>
+  <data name="Error_connection" xml:space="preserve">
+    <value>Please check your Internet connection and try again.</value>
+  </data>
+  <data name="Error_delete" xml:space="preserve">
+    <value>Deletion Error</value>
+  </data>
+  <data name="Error_update" xml:space="preserve">
+    <value>Update Error</value>
+  </data>
+  <data name="Gallery_compareCount" xml:space="preserve">
+    <value>Compare {0}/{1}</value>
+    <comment>{0} - number selected
+{1} - Max compare</comment>
+  </data>
+  <data name="Gallery_compareTooFewMessage" xml:space="preserve">
+    <value>Please select 2 photos to compare.</value>
+  </data>
+  <data name="Gallery_compareTooFewTitle" xml:space="preserve">
+    <value>Only one photo selected!</value>
+  </data>
+  <data name="Gallery_compareTooManyMessage" xml:space="preserve">
+    <value>Deselect another photo to add this one.</value>
+  </data>
+  <data name="Gallery_compareTooManyTitle" xml:space="preserve">
+    <value>Only {0} photos can be compared!</value>
+    <comment>{0} - max compare</comment>
+  </data>
+  <data name="Gallery_edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Gallery_noPasscode" xml:space="preserve">
+    <value>If you want to be extra secure, you can lock this condition behind a pincode in its settings area.</value>
+  </data>
+  <data name="Gallery_selected" xml:space="preserve">
+    <value>Selected</value>
+  </data>
+  <data name="Gallery_takeNew" xml:space="preserve">
+    <value>Take New</value>
+  </data>
+  <data name="Gallery_welcome1" xml:space="preserve">
+    <value>Tap the camera button above to take your first photo of this condition!</value>
+  </data>
+  <data name="Gallery_welcome2" xml:space="preserve">
+    <value>Creating new folders for each skin condition or body location will help you organise your photos and keep track of them over time.</value>
+  </data>
+  <data name="Gallery_welcome3" xml:space="preserve">
+    <value>Don't worry - the photos that you take won't be added to your camera roll.</value>
+  </data>
+  <data name="Login_btn_login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_error" xml:space="preserve">
+    <value>There was an error logging into the service. Please make sure that you're connected to the Internet and that your details are correct!</value>
+  </data>
+  <data name="Login_errorNoEmail" xml:space="preserve">
+    <value>Please enter the email address associated with your account.</value>
+  </data>
+  <data name="Login_title" xml:space="preserve">
+    <value>Log into an existing account</value>
+  </data>
+  <data name="Main_activeCollections" xml:space="preserve">
+    <value>Active Collections</value>
+  </data>
+  <data name="Main_add" xml:space="preserve">
+    <value>Add New</value>
+  </data>
+  <data name="Main_authErr" xml:space="preserve">
+    <value>There was an issue retrieving your data - please sign in again.</value>
+  </data>
+  <data name="Main_connectionErr" xml:space="preserve">
+    <value>There was an error retrieving your content from the server. Please check your connection and try again later.</value>
+  </data>
+  <data name="Main_feedbackMessage" xml:space="preserve">
+    <value>Thanks for trying out MySkinSelfie! We really appreciate it. If you haven't done so already, please fill out the questionnaire</value>
+  </data>
+  <data name="Main_feedbackOk" xml:space="preserve">
+    <value>Open Questionnaire</value>
+  </data>
+  <data name="Main_feedbackTitle" xml:space="preserve">
+    <value>Please leave feedback</value>
+  </data>
+  <data name="Main_finishedCollections" xml:space="preserve">
+    <value>Finished Collections</value>
+  </data>
+  <data name="Main_loadingAppData" xml:space="preserve">
+    <value>Updating app data...</value>
+  </data>
+  <data name="Main_loadingUserContent" xml:space="preserve">
+    <value>Getting your content...</value>
+  </data>
+  <data name="Main_settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Main_title" xml:space="preserve">
+    <value>MySkinSelfie</value>
+  </data>
+  <data name="Main_welcome1" xml:space="preserve">
+    <value>Welcome to MySkinSelfie, the skin monitoring app.</value>
+  </data>
+  <data name="Main_welcome2" xml:space="preserve">
+    <value>Help yourself and your doctor to diagnose and manage your skin problem by recording the appearance, changes and response to treatment of any skin, nail or scalp condition.</value>
+  </data>
+  <data name="Main_welcome3" xml:space="preserve">
+    <value>Privately store dated and labelled images securely away from your gallery.</value>
+  </data>
+  <data name="Main_welcome4" xml:space="preserve">
+    <value>To begin, create a new folder by tapping the button in the upper right.</value>
+  </data>
+  <data name="PhotoCarousel_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="PhotoCompare_title" xml:space="preserve">
+    <value>Comparing {0} photos</value>
+    <comment>{0} - compare count</comment>
+  </data>
+  <data name="PhotoEdit_delete" xml:space="preserve">
+    <value>Delete Photo</value>
+  </data>
+  <data name="PhotoEdit_deleteConfirmMessage" xml:space="preserve">
+    <value>Are you sure you want to delete this photo? This action cannot be undone!</value>
+  </data>
+  <data name="PhotoEdit_deleteConfirmTitle" xml:space="preserve">
+    <value>Delete Photo?</value>
+  </data>
+  <data name="PhotoEdit_deleteConfirmYes" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="PhotoEdit_deleteErr" xml:space="preserve">
+    <value>There was an error while deleting your photo - please try again later.</value>
+  </data>
+  <data name="PhotoEdit_deleteSuccess" xml:space="preserve">
+    <value>Photo deleted!</value>
+  </data>
+  <data name="PhotoEdit_finished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="PhotoEdit_notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="PhotoEdit_shotConditions" xml:space="preserve">
+    <value>Shot Conditions</value>
+  </data>
+  <data name="PhotoEdit_treatment" xml:space="preserve">
+    <value>Treatment</value>
+  </data>
+  <data name="PhotoEdit_updateErr" xml:space="preserve">
+    <value>There was an error while updating your photo - please try again later.</value>
+  </data>
+  <data name="PhotoEdit_updateSuccess" xml:space="preserve">
+    <value>Photo updated successfully!</value>
+  </data>
+  <data name="PhotoEdit_uploadErr" xml:space="preserve">
+    <value>There was an error while uploading your photo - please try again later.</value>
+  </data>
+  <data name="PhotoEdit_uploadSuccess" xml:space="preserve">
+    <value>Photo uploaded successfully!</value>
+  </data>
+  <data name="ResetPassword_failure" xml:space="preserve">
+    <value>There was an error while trying to reset your password. Make sure you're connected to the Internet.</value>
+  </data>
+  <data name="ResetPassword_message" xml:space="preserve">
+    <value>Enter the email address associated with your account below and we'll send you a new password:</value>
+  </data>
+  <data name="ResetPassword_success" xml:space="preserve">
+    <value>Your password has been changed. Please check your email inbox for the new password.</value>
+  </data>
+  <data name="ResetPassword_title" xml:space="preserve">
+    <value>Enter Email Address</value>
+  </data>
+  <data name="Settings_accountHeader" xml:space="preserve">
+    <value>Account Settings</value>
+  </data>
+  <data name="Settings_addPIN" xml:space="preserve">
+    <value>Add a Security PIN</value>
+  </data>
+  <data name="Settings_addPINEnter" xml:space="preserve">
+    <value>Enter a new PIN</value>
+  </data>
+  <data name="Settings_addPINSuccess" xml:space="preserve">
+    <value>PIN protection added!</value>
+  </data>
+  <data name="Settings_appHeader" xml:space="preserve">
+    <value>App Settings</value>
+  </data>
+  <data name="Settings_changePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="Settings_changePIN" xml:space="preserve">
+    <value>Change Security PIN</value>
+  </data>
+  <data name="Settings_dangerHeader" xml:space="preserve">
+    <value>Dangerous Settings</value>
+  </data>
+  <data name="Settings_deleteAcc" xml:space="preserve">
+    <value>Delete Account</value>
+  </data>
+  <data name="Settings_deleteAccFailure" xml:space="preserve">
+    <value>There was a problem when deleting your account.</value>
+  </data>
+  <data name="Settings_deleteAccSafeWord" xml:space="preserve">
+    <value>DELETE</value>
+  </data>
+  <data name="Settings_deleteAccSafeWordMismatch" xml:space="preserve">
+    <value>You didn't type '{0}'!</value>
+    <comment>{0} - Settings_deleteAccSafeWord</comment>
+  </data>
+  <data name="Settings_deleteAccSuccess" xml:space="preserve">
+    <value>Your account has been successfully deleted.</value>
+  </data>
+  <data name="Settings_deleteAccWarning" xml:space="preserve">
+    <value>Doing this will permanently delete all of your account information and photos from the server!
+
+If you're sure you want to do this, type '{0}' into the box below:</value>
+    <comment>{0} - Settings_deleteAccSafeWord</comment>
+  </data>
+  <data name="Settings_logOut" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="Settings_logOutConfirm" xml:space="preserve">
+    <value>Are you sure you want to log out of Skin Selfie? You will need your username and password to sign in again.</value>
+  </data>
+  <data name="Settings_logoutConfirmTitle" xml:space="preserve">
+    <value>Confirm Logout</value>
+  </data>
+  <data name="Settings_removePIN" xml:space="preserve">
+    <value>Remove Security PIN</value>
+  </data>
+  <data name="Settings_removePINEnter" xml:space="preserve">
+    <value>Enter your current PIN to continue</value>
+  </data>
+  <data name="Settings_removePINSuccess" xml:space="preserve">
+    <value>PIN protection removed!</value>
+  </data>
+  <data name="Settings_resendEmail" xml:space="preserve">
+    <value>Resend Confirmation Email</value>
+  </data>
+  <data name="Settings_resendEmailFail" xml:space="preserve">
+    <value>Error sending email!</value>
+  </data>
+  <data name="Settings_resendEmailSuccess" xml:space="preserve">
+    <value>Email sent.\nPlease allow a few minutes for it to arrive.</value>
+  </data>
+  <data name="Settings_resetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="Settings_resetPasswordFailure" xml:space="preserve">
+    <value>There was an error while trying to reset your password.</value>
+  </data>
+  <data name="Settings_resetPasswordSuccess" xml:space="preserve">
+    <value>Your password has been changed. Please check your email inbox for the new password and sign in again.</value>
+  </data>
+  <data name="Settings_resetPasswordWarning" xml:space="preserve">
+    <value>Your new password will be sent to your registered email address:
+ {0} 
+You will need to have access to this address in order to sign back into Skin Selfie. Are your sure you want to do this?</value>
+    <comment>{0} - user's email</comment>
+  </data>
+  <data name="Settings_title" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Settings_warning" xml:space="preserve">
+    <value>WARNING!</value>
+  </data>
+  <data name="Unlock_blurbNew" xml:space="preserve">
+    <value>Enter a new PIN to lock the application behind.</value>
+  </data>
+  <data name="Unlock_blurbUnlock" xml:space="preserve">
+    <value>Enter your PIN to continue.</value>
+  </data>
+  <data name="Unlock_btnForgot" xml:space="preserve">
+    <value>Forgotten PIN?</value>
+  </data>
+  <data name="Unlock_btnNew" xml:space="preserve">
+    <value>Add PIN</value>
+  </data>
+  <data name="Unlock_btnUnlock" xml:space="preserve">
+    <value>Unlock</value>
+  </data>
+  <data name="Unlock_confirm" xml:space="preserve">
+    <value>Please confirm the PIN</value>
+  </data>
+  <data name="Unlock_confirmErr" xml:space="preserve">
+    <value>The entered PINs didn't match!</value>
+  </data>
+  <data name="Unlock_folderForgotMessage" xml:space="preserve">
+    <value>A new PIN for this folder can be emailed to you. Would you like to reset this PIN and send a new one to {0}?</value>
+    <comment>{0} - user email</comment>
+  </data>
+  <data name="Unlock_folderForgotOk" xml:space="preserve">
+    <value>Reset PIN</value>
+  </data>
+  <data name="Unlock_folderResetSuccess" xml:space="preserve">
+    <value>Check your email inbox for your new PIN!</value>
+  </data>
+  <data name="Unlock_forgotConfirm" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="Unlock_forgotMessage" xml:space="preserve">
+    <value>Signing out and then back in will reset the app's PIN. Would you like to sign out now?</value>
+  </data>
+  <data name="Unlock_forgotTitle" xml:space="preserve">
+    <value>Forgotten your PIN?</value>
+  </data>
+  <data name="Unlock_mismatch" xml:space="preserve">
+    <value>Please enter the correct PIN.</value>
+  </data>
+  <data name="Unlock_ohwtf" xml:space="preserve">
+    <value>There was an issue retrieving your data - please sign in again.</value>
+  </data>
+  <data name="Unlock_resetErr" xml:space="preserve">
+    <value>There was an error resetting the PIN.</value>
+  </data>
+  <data name="Unlock_titleNew" xml:space="preserve">
+    <value>Enter a new PIN</value>
+  </data>
+  <data name="Unlock_titleUnlock" xml:space="preserve">
+    <value>App locked!</value>
+  </data>
+  <data name="Welcome_blurb" xml:space="preserve">
+    <value>Please create an account or sign in to continue.</value>
+  </data>
+  <data name="Welcome_btn_createAcc" xml:space="preserve">
+    <value>Create New Account</value>
+  </data>
+  <data name="Welcome_btn_forgottenPassword" xml:space="preserve">
+    <value>Forgotten Password?</value>
+  </data>
+  <data name="Welcome_btn_signIn" xml:space="preserve">
+    <value>Sign Into Existing Account</value>
+  </data>
+  <data name="Welcome_header" xml:space="preserve">
+    <value>Welcome to MySkinSelfie!</value>
+  </data>
+  <data name="Welcome_title" xml:space="preserve">
+    <value>Sign into MySkinSelfie</value>
+  </data>
+  <data name="App_loginError" xml:space="preserve">
+    <value>Login error!</value>
+  </data>
+  <data name="App_passwordFailMessage" xml:space="preserve">
+    <value>The entered passwords don't match!</value>
+  </data>
+  <data name="App_passwordFailTitle" xml:space="preserve">
+    <value>Password Confirm</value>
+  </data>
+  <data name="App_pinPromptMessage" xml:space="preserve">
+    <value>Would you like to secure the app behind a PIN?</value>
+  </data>
+  <data name="App_pinPromptNo" xml:space="preserve">
+    <value>Maybe later</value>
+  </data>
+  <data name="App_pinPromptTitle" xml:space="preserve">
+    <value>Add a PIN?</value>
+  </data>
+  <data name="App_pinPromptYes" xml:space="preserve">
+    <value>Add PIN</value>
+  </data>
+  <data name="Main_shareComingSoon" xml:space="preserve">
+    <value>The ability to share your folders of photos with other MySkinSelfie users is coming soon.
+Watch this space!</value>
+  </data>
+  <data name="Help_controlBody" xml:space="preserve">
+    <value>The files you've uploaded to MySkinSelfie are under your control, as is your data. At any point you can choose to permanently delete an image, registered skin condition or even your whole account from the cloud.</value>
+  </data>
+  <data name="Help_controlHeading" xml:space="preserve">
+    <value>You're in Control</value>
+  </data>
+  <data name="Help_funcBody" xml:space="preserve">
+    <value>By helping you take consistent photographs of your skin through an overlay system, MySkinSelfie is a great tool to use to keep track of your skin conditions' progress. Keep your photos organised by the location of the condition on your body and track how they change over time through the handy comparison tool.  The images you take are stored in the cloud - meaning you can access them across multiple devices for years to come. Perfect for long-term condition tracking.</value>
+  </data>
+  <data name="Help_funcHeading" xml:space="preserve">
+    <value>Track Your Progress</value>
+  </data>
+  <data name="Help_heading" xml:space="preserve">
+    <value>MySkinSelfie makes it easier to keep track of how your skin conditions change over time.</value>
+  </data>
+  <data name="Help_securityBody" xml:space="preserve">
+    <value>Photos taken in MySkinSelfie are uploaded to our cloud servers over a secure connection. All uploaded files are encrypted, meaning that you can be safe in the knowledge that no-one will get their hands on your sensitive images. Photos are kept out of your device's default image gallery and you even have the option to lock the application behind a PIN, preventing any potential embarrassment!</value>
+  </data>
+  <data name="Help_securityHeading" xml:space="preserve">
+    <value>Safe &amp; Sound</value>
+  </data>
+  <data name="Help_shareBody" xml:space="preserve">
+    <value>A future update will allow you to share the images you have taken with other MySkinSelfie users. Watch this space!</value>
+  </data>
+  <data name="Help_shareHeading" xml:space="preserve">
+    <value>Share Your Progress - Coming Soon!</value>
+  </data>
+  <data name="Help_title" xml:space="preserve">
+    <value>About MySkinSelfie</value>
+  </data>
+
+  <data name="PrivacyPolicy_title" xml:space="preserve">
+    <value>Your Privacy with MySkinSelfie</value>
+  </data>
+    
+  <data name="PrivacyPolicy_title" xml:space="preserve">
+    <value>Your Privacy with MySkinSelfie</value>
+  </data>
+  <data name="PrivacyPolicy_intro" xml:space="preserve">
+    <value>Your privacy is important to us and we believe you should always know what data we collect from you and the ways in which we use it. Our aim is to give you meaningful control and empower you to make the best decisions about the information you share with us.
+Here are some key points from the policy, but please read the full document:</value>
+  </data>
+  <data name="PrivacyPolicy_KeyPointsTitle" xml:space="preserve">
+    <value>Key Points</value>
+  </data>
+      <data name="PrivacyPolicy_KeyPoints" xml:space="preserve">
+    <value>MySkinSelfie has been developed at Open Lab, Newcastle University as a research project. Any information we collect from you will be stored securely in the EU and may be subject to processing.
+
+We often publish findings based on user activity, these publications will never contain information or data that could be used to identify you as an individual.
+
+MySkinSelfie may share personal data with businesses outside of the EU in order to provide a better service. MySkinSelfie is hosted on Microsoft Azure and uses SendGrid to distribute emails.
+
+Your uploaded photos are encrypted and securely stored on Microsoft Azure servers within the EU. No-one will view these images without your explicit consent.
+
+MySkinSelfie complies with GDPR and any external services that are not based in the EU comply with the EU-US Privacy Shield Frameworks as set forth by the U.S. Department of Commerce regarding the collection, use, and retention of personal data from the EU and Switzerland. For more information about the Privacy Shield generally, and to view the certificates online, please visit www.privacyshield.gov.
+
+If you wish to remove your data and images from the MySkinSelfie servers, you can permanently delete your account at any time through the application's settings menu.
+
+If you have any questions about this policy, how we collect or process your personal data or anything else related to our privacy practices, you can contact us at any time.</value>
+  </data>
+    <data name="PrivacyPolicy_Full" xml:space="preserve">
+<value>Please read this privacy policy carefully before using the services offered by Open Lab, University of Newcastle Upon Tyne (“Open Lab, Newcastle University”, "Open Lab, University of Newcastle Upon Tyne", “we”, “us”). We recognise the importance of your privacy. Therefore, we have created this Privacy Policy so that you know how we use and disclose your information when you make it available to us. This Privacy Policy applies solely to information collected at this Application. By using or accessing the Application, you signify your agreement to be bound by our Privacy Policy.
+
+IF YOU DO NOT AGREE TO THIS PRIVACY POLICY YOU MAY NOT ACCESS OR OTHERWISE USE OUR APPLICATION.
+
+Personal Information that we collect:
+We collect some personal information from you when you use our services. If you register you may be asked to voluntarily provide additional information to us, such as your email address, name and a public profile which we use to keep your account secure and improve the experience for yourself and other users.
+Non-personal or Aggregate Information that we collect:
+We may collect non-personally identifiable information, such as pages viewed, browser type, duration and frequency of visits or other data, and may aggregate any information collected in a manner which does not identify any individual (“Aggregate Information”). Aggregate Information obtained in connection with the Application may be intermingled with and used by us in conjunction with information obtained through sources other than the Application, including both offline and online sources. Aggregate Information may be shared by us with third parties by allowing them to link to and collect data from the Application. This data will be used for their benefit and for ours, for marketing advertising or other purposes, including analysis of the Application for purposes of improving your experience with the Application and academic publication.
+
+Information Usage:
+We will only use your personal information as described below, unless you have specifically consented to another type of use, either at the time the personal information is collected from you or through some other form of consent from you or notification to you. We may use your personal information as follows: (i) to respond to your inquires or requests; (ii) to send you emails and newsletters from time to time with information about our Application; (iii) to share with our partners, by allowing them to link to and collect your information from the Application; (iv) we may permit our vendors and subcontractors to access your personal information, but they are only permitted to do so in connection with performing services for us; (v) we may disclose personal information as required by law or legal process; (vi) to investigate suspected fraud, harassment or other violations of any law, rule or regulation, or the terms or policies for our services or our sponsors and (vii) we may transfer your personal information in connection with the sale or merger or change of control of the services.
+
+Security:
+We will ensure that we put in place and will maintain appropriate technical and organisational measures to safeguard any personal information submitted onto the Application. However, you acknowledge that due to the inherent open nature of the Internet, no transmission via the Internet can be guaranteed to be 100% secure. As a result of this and other factors beyond our control, we cannot guarantee the security of the information that you transmit to or through our Application. Therefore, you assume that risk by using the Application.
+
+Protection for Children:
+We do not collect personal information from children under the age of 13 years old. When we become aware that personal information from a child under 13 years old has been collected without such child’s parent or guardian’s consent, we will use all reasonable efforts to delete such information from our database. We encourage parents to monitor the online activities of their children to ensure that no information is collected from a child without parental permission.
+
+Other Sites and Applications:
+As a convenience to you, we may provide links to third-party sites from within our Application. We are not responsible for the privacy practices or content of any third parties or third-party sites. We encourage you to review these privacy policies to ensure that you are familiar with their terms.
+If you use any extra plug-ins or third party applications (“Applications”) in connection with the Application, the provider(s) of these Applications may obtain access to certain personal information about you. We do not and cannot control how the providers of Applications may use any personal information collected in connected with such Applications. Please be sure to review any privacy policies or other terms applicable to your use of these Applications prior to installation.
+
+Changes to this Privacy Policy:
+We reserve the right, at our discretion, to change, modify, add, or remove portions from this Privacy Policy at any time. Your continued use of the Application following the posting of any changes to this Privacy Policy means you accept and consent to such changes.
+
+Opt-Out Process:
+If you do not want to receive email communications (including email digests) from us in the future, please send an email to us at openlab-admin@newcastle.ac.uk requesting to be removed from our mailing list. You will also have the option of clicking on a link included in email correspondence you receive from us in order to remove yourself from our mailing list.
+If you do not want to want to receive our newsletters in the future, please send an email to us at openlab-admin@newcastle.ac.uk requesting to be removed from our mailing list. You will also have the option of clicking on a link included in the newsletters you receive from us in order to remove yourself from our mailing list.
+
+We are not, however, responsible for removing your personal information from the lists of any third party who has previously been provided your information in accordance with this Privacy Policy or your consent, such as a sponsor. You should contact such third parties directly if you wish to have your personal information removed from their lists.
+
+Communications with Us:
+By providing your email address to us, you expressly consent to receive emails from us. We may use email to communicate with you, to send information that you have requested or to send information about other products or services developed or provided by us or our business partners, provided that, we will not give your email address to another party to promote their products or services directly to you without your consent or as set forth in this policy.
+Any communication or material you transmit to us by email or otherwise, including any data, questions, comments, suggestions, or the like is, and will be treated as, nonconfidential and nonproprietary. Furthermore, you expressly agree that we are free to use any ideas, concepts, know-how, or techniques contained in any communication you send to us without compensation and for any purpose whatsoever, including but not limited to, developing, manufacturing and marketing products and services using such information.
+
+Application Terms of Use:
+Use of this Application is governed by, and subject to, the Terms of Use. This Privacy Policy is incorporated into such terms. Your use, or access, of the Application constitutes your agreement to be bound by these provisions.
+
+IF YOU DO NOT AGREE TO THESE TERMS OF USE YOU MAY NOT ACCESS OR OTHERWISE USE THE APPLICATION.
+
+Transfers of Personal Data Outside the EEA: The personal data that we collect from you may be transferred to, and stored at, a destination outside the European Economic Area ("EEA"). It may also be processed by staff operating outside the EEA who work for us or for one of our suppliers. By submitting your personal data, you agree to this transfer, storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy.
+
+Contact Information:
+Should you have any questions, contact us:
+
+Address:
+Open Lab
+Floor 1
+Urban Sciences Building
+1 Science Square
+Science Central
+Newcastle Upon Tyne
+NE4 5TG
+Phone: +44 191 20 84642 | 84630
+Email: openlab-admin@newcastle.ac.uk</value>
+</data>
+  <data name="PrivacyPolicy_FullTitle" xml:space="preserve">
+    <value>Full Privacy Policy</value>
+  </data>
+    <data name="Terms_Title" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+
+    <data name="Terms_Intro" xml:space="preserve">
+    <value>Please read these terms of use carefully before using the services offered by Open Lab, University of Newcastle Upon Tyne (“Open Lab, Newcastle University”, "Open Lab, University of Newcastle Upon Tyne", “we”, “us”). These terms of use set forth the legally binding terms and conditions for your use of the MySkinSelfie apps or website (the "Service") and the services, features, content, applications or widgets offered by Open Lab, Newcastle University (collectively with the Service, the "Service").</value>
+
+    Please read these Terms of Use carefully before using the Service. If you do not accept these Terms of Use, then you may not use the Service. These Terms of Use are subject to change by us at any time, effective when posted on the Service. Your continued use after such notice will constitute acceptance by you of such changes.
+
+    These Terms of Use apply to all users of the Service, including, without limitation, users who are contributors of content, information, and other materials or services on the Service, individual users of the Service, venues that access the Service, and users that have a page on the Service. By using the Service you are agreeing to be bound by these Terms of Use.
+  </data>
+
+    <data name="Terms_UseTitle" xml:space="preserve">
+    <value>Use of the Service:</value>
+  </data>
+
+  <data name="Terms_UseBody" xml:space="preserve">
+    <value>You may use this Service only subject to these Terms of Use, all applicable laws, rules and regulations and any agreements or terms with third parties to which you are subject. You may not use this Service for commercial purposes, such as to promote a product or service, without our prior written consent. We may impose restrictions on certain features or your access to the Service without notice or liability.</value>
+  </data>
+
+    <data name="Terms_ProhibitedTitle" xml:space="preserve">
+    <value>Prohibited Use:</value>
+  </data>
+
+  <data name="Terms_ProhibitedBody" xml:space="preserve">
+    <value>You may not use spiders, robots, data mining techniques or other automated devices or programs to catalog, download or otherwise reproduce, store or distribute content available on the Service. Further, you may not use any such automated means to manipulate the Service or attempt to exceed the limited authorisation and access granted to you under these Terms of Use or disrupt the Service or any other user's use of the Service, including, without limitation, via means of overloading, “flooding”, “mail-bombing” or “crashing” the Service or circumventing security or user authentication measures. You may not frame portions of the Service within another web site or establish links from any other web site to any page of the Service other than the home page. You may not resell use of, or access to, the Service to any third party.</value>
+  </data>
+
+  <data name="Terms_ContentTitle" xml:space="preserve">
+    <value>Content:</value>
+  </data>
+
+    <data name="Terms_ContentBody" xml:space="preserve">
+    <value>Users may be able to post content in certain areas on the Service, such as in connection with chats, pages, activities and in the comments or discussion sections of the Service. You are solely responsible for any content, photos, artwork, videos, text, graphics, articles and other information you upload, post, display or otherwise provide to the Service (“Content”). You represent and warrant that: (i) you own the Content posted by you on the Service or otherwise have the right to grant the license rights granted in these Terms of Use; (ii) your Content does not violate the privacy rights, publicity rights, intellectual property rights, or any other rights of any person; and (iii) the posting of Content on the Service does not result in a breach of any contract between you and a third party.</value>
+
+    We do not guarantee the accuracy, completeness or usefulness of any Content. Furthermore, we do not endorse, nor are we responsible for, the accuracy and reliability of any opinion, advice or statement made on the Service by any third party. We assume no responsibility and no obligation to modify or remove any inappropriate Content, and no responsibility for the conduct of the user submitting any such content.
+
+    We reserve the right, in our sole discretion, to reject, refuse to post or remove any Content posted by you. We expressly reserve the right to remove or revoke your registration and/or restrict, suspend, or terminate your access to the Service if we determine, in our sole discretion, that you pose a threat to the Service and/or its users.
+
+    After posting your Content to the Service, you continue to retain all ownership rights in such Content, and you continue to have the right to use your Content in any way you choose. By supplying Content to any area of the Service, you automatically grant to us for purposes of maintaining the Service, making Content available, and you represent and warrant that you have the right to grant an irrevocable, transferable, sub-licensable, perpetual, non-exclusive, fully paid up, worldwide license to use, copy, perform, reproduce, display, edit, modify and distribute such information and Content and to prepare derivative works of, or incorporate into other works, such Content. Additionally, we shall be free to use any ideas, concepts, know-how or techniques contained in such Content for any purpose whatsoever, including without limitation, developing, manufacturing and marketing products and services which incorporate such Content, including mobile applications that may be created using the Service.
+  </data>
+
+    <data name="Terms_BehaviourTitle" xml:space="preserve">
+    <value>Online Behaviour:</value>
+  </data>
+
+    <data name="Terms_BehaviourBody" xml:space="preserve">
+    <value>The Service is a space dedicated to helping communities engage in new and creative ways of commissioning mobile applications. You should not post Content to the Service that is inappropriate for or unrelated to this mission. The following is a partial list of the type of Content that is illegal or prohibited to post on or through the Service. Prohibited Content includes, but is not limited to Content that:
+
+is patently offensive and promotes racism, bigotry, hatred or physical harm of any kind against any group or individual;
+
+harasses or advocates harassment of another person;
+
+exploits people in a sexual or violent manner;
+
+contains nudity, violence, or offensive subject matter or contains a link to an adult website;
+
+solicits personal information from anyone under the age of 21 years;
+
+provides any telephone numbers, street addresses, last names, URLs or email addresses;
+
+promotes information that you know is false or misleading or promotes illegal activities or conduct that is abusive, threatening, obscene, defamatory or libellous;
+
+promotes an illegal or unauthorised copy of another person's copyrighted work, such as providing pirated computer programs or links to them, providing information to circumvent manufacture-installed copy-protect devices, or providing pirated music or links to pirated music files;
+
+involves the transmission of "junk mail," "chain letters," or unsolicited mass mailing, instant messaging, "spimming," or "spamming";
+
+contains restricted or password only access pages or hidden pages or images (those not linked to or from another accessible page);
+
+furthers or promotes any criminal activity or enterprise or provides instructional information about illegal activities including, but not limited to, making or buying illegal weapons, violating someone's privacy, or providing or creating computer viruses;
+
+solicits passwords from other users or personal identifying information for commercial or unlawful purposes from other users;
+
+involves commercial activities and/or sales without our prior written consent such as contests, sweepstakes, barter, advertising, or pyramid schemes;
+
+or includes a photograph or video footage of another person that you have posted without that person's consent or other third party content including but not limited to music, trademarks, logos, artwork or any other copyrighted, trademarked, or proprietary third party content that you have not secured permission to include on the Site.
+
+If you wish to report any Content or conduct on the Service that you believe is inappropriate, please contact us at openlab-admin@newcastle.ac.uk.
+    </value>
+    </data>
+
+    <data name="Terms_MonitoringTitle" xml:space="preserve">
+    <value>No Content Monitoring:</value>
+  </data>
+
+  <data name="Terms_MonitoringBody" xml:space="preserve">
+    <value>We are under no obligation to screen or monitor Content, but may review Content from time to time at our sole discretion to review compliance with these Terms of Use. We will make all determinations as to what Content is appropriate in our sole discretion. We may include, edit or remove any Content at any time without notice. We may employ automated monitoring devices or techniques to protect our users from mass unsolicited communications (also known as "spam") and/or other types of electronic communications that we deem objectionable. Such devices or techniques are not perfect, and we will not be responsible for any legitimate communication that is blocked, or for any unsolicited communication that is not blocked. Mailboxes may have a limited storage capacity. If you exceed the maximum permitted storage space, we may employ automated devices that delete or block email messages that exceed the limit. We will not be responsible for such deleted or blocked messages.</value> 
+    </data>
+
+    <data name="Terms_TerminationTitle" xml:space="preserve">
+    <value>Termination of Access:</value>
+  </data>
+
+  <data name="Terms_TerminationBody" xml:space="preserve">
+    <value>In addition to any right or remedy that may be available to us under these Terms of Use or applicable law, we may suspend, limit or terminate all or a portion of your access to the Service, at any time with or without notice and with or without cause. In addition, we may refer any information on illegal activities, including your identity, to the proper authorities.</value>   
+    </data>
+
+    <data name="Terms_LinksTitle" xml:space="preserve">
+    <value>Links:</value>
+  </data>
+
+  <data name="Terms_LinksBody" xml:space="preserve">
+    <value>This Service may contain links to other web sites not maintained by us (including without limitation Facebook, Twitter and other social media platforms). We encourage you to be aware when you leave our Service and to read the terms and conditions and privacy statements of each and every web site that you visit. We are not responsible for the practices or the content of such other web sites or services.
+
+The existence of a link between this Service and any other website is not and shall not be understood to be an endorsement by us of the owner or proprietor of the linked internet website, nor an endorsement of us by the owner or proprietor of such linked website.
+
+You agree that we shall not be liable to you or anyone else for any type of loss or damages, regardless of whether based on contract, negligence, intentional wrongdoing, or liability without fault for any costs, losses, or damages (whether direct, indirect, compensatory, special, lost profits, liquidated, consequential, or punitive) arising out of or in any way in connection with your access to or use of any such third party site.</value>   
+    </data>
+
+    <data name="Terms_RightsTitle" xml:space="preserve">
+    <value>Our Proprietary Rights:</value>
+  </data>
+
+  <data name="Terms_RightsBody" xml:space="preserve">
+    <value>We or our licensors are the exclusive owners of all copy, software, graphics, designs and all copyrights, trademarks and other intellectual property or proprietary rights contained on or used in connection with the Service. Except as set forth herein, you agree not to copy, distribute, modify or make derivative works of any materials without the prior written consent of the owner of such materials. All rights not granted under these Terms of Use are reserved by us.
+    </value></data>
+
+    <data name="Terms_WarrantiesTitle" xml:space="preserve">
+    <value>No Warranties:</value>
+  </data>
+
+  <data name="Terms_WarrantiesBody" xml:space="preserve">
+    <value>The Service, including all content made available on or accessed through the Service, is provided "as is" and we make no representations or warranties of any kind whatsoever for the content made available through the Service. The Service may contain typographical errors and you agree that we shall not be bound by any such errors.
+
+Further, to the fullest extent permissible by law, we disclaim any express or implied warranties, including, without limitation, non-infringement, title, merchantability or fitness for a particular purpose.
+
+We do not warrant that the functions contained in the Service or, materials or content contained therein will be completely secure, uninterrupted or error free, that defects will be corrected, or that the site or the server that makes it available is free of viruses or other harmful components.
+
+We shall not be liable for the use of the Service, including, without limitation, the content and any errors contained therein provided by third parties.
+
+In no event will we be liable under any theory of tort, contract, strict liability or other legal or equitable theory for any direct, indirect, special, incidental, or other consequential damages, lost profits, lost data, lost opportunities, costs of cover, exemplary, punitive, personal injury/wrongful death, each of which is hereby excluded by agreement of the parties regardless of whether or not we have been advised of the possibility of such damages.</value></data>
+
+<data name="Terms_IndeminityTitle" xml:space="preserve">
+    <value>Indemnity:</value>
+  </data>
+
+  <data name="Terms_IndemnityBody" xml:space="preserve">
+    <value>You agree to defend, indemnify and hold harmless us, our business partners and agents, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney's fees) arising from any breach by you of any of these Terms of Use.
+    </value>
+    </data>
+
+    <data name="Terms_JurisdictionTitle" xml:space="preserve">
+    <value>Jurisdiction and Governing Law:</value>
+  </data>
+
+  <data name="Terms_JurisdictionBody" xml:space="preserve">
+    <value>English law governs these terms and conditions. You submit to the non-exclusive jurisdiction of the English courts.</value>
+    </data>
+
+    <data name="Terms_SeverabilityTitle" xml:space="preserve">
+    <value>Severability</value>
+  </data>
+
+  <data name="Terms_SeverabilityBody" xml:space="preserve">
+    <value>If any part of these Terms of Use shall be held or declared to be invalid or unenforceable for any reason by any court of competent jurisdiction, such provision shall be ineffective but shall not affect any other part of these Terms of Use.</value>
+    </data>
+
+    <data name="Terms_WaiverTitle" xml:space="preserve">
+    <value>Waiver; Remidies:</value>
+  </data>
+
+  <data name="Terms_WaiverBody" xml:space="preserve">
+    <value>The failure by us to partially or fully exercise any rights or the waiver of any breach of these Terms of Use by you, shall not prevent a subsequent exercise of such right by us or be deemed a waiver by us of any subsequent breach by you of the same or any other term of these Terms of Use. Our rights and remedies under these Terms of Use shall be cumulative, and the exercise of any such right or remedy shall not limit our right to exercise any other right or remedy.</value>
+    </data>
+
+    <data name="Terms_NoticesTitle" xml:space="preserve">
+    <value>Notices:</value>
+  </data>
+
+  <data name="Terms_NoticesBody" xml:space="preserve">
+    <value>Any and all notices to be given by either one of us to the other pursuant to or in connection with these Terms of Use shall be deemed sufficiently given when forwarded by e-mail in each case addressed to you at the e-mail address you have given us or to us at the e-mail address displayed on the Service.</value>
+    </data>
+
+    <data name="Terms_ContactTitle" xml:space="preserve">
+    <value>Contact Information:</value>
+  </data>
+
+  <data name="Terms_ContactBody" xml:space="preserve">
+    <value>Should you have any questions, contact us:
+
+Address:
+Open Lab
+Floor 1
+Urban Sciences Building
+1 Science Square
+Science Central
+Newcastle Upon Tyne
+NE4 5TG
+
+Phone: +44 191 20 84642 | 84630
+Email: openlab-admin@newcastle.ac.uk
+
+Effective Date:
+May 25, 2018</value></data>
+    
+  <data name="Main_help" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Gallery_needPerms" xml:space="preserve">
+    <value>Please enable camera access to continue</value>
+  </data>
+  <data name="PhotoEdit_AddedToQueue" xml:space="preserve">
+    <value>This photo has been added to your upload queue!</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_message" xml:space="preserve">
+    <value>Make sure you're on WiFi to avoid data charges when uploading your photos! You can  access your upload queue at any time from the app's main screen.</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_now" xml:space="preserve">
+    <value>Upload Now</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_queue" xml:space="preserve">
+    <value>Upload Later</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_title" xml:space="preserve">
+    <value>Upload now or later?</value>
+  </data>
+  <data name="Uploads_allBtn" xml:space="preserve">
+    <value>Upload All</value>
+  </data>
+  <data name="Uploads_btn" xml:space="preserve">
+    <value>Uploads</value>
+  </data>
+  <data name="Uploads_dataWarning" xml:space="preserve">
+    <value>Make sure you're on WiFi to avoid data charges when uploading your photos!</value>
+  </data>
+  <data name="Uploads_dataWarningContinue" xml:space="preserve">
+    <value>Start Uploading</value>
+  </data>
+  <data name="Uploads_noneMessage" xml:space="preserve">
+    <value>You don't have any pending uploads. If you take a photo while offline, it will appear here for later.</value>
+  </data>
+  <data name="Uploads_noneTitle" xml:space="preserve">
+    <value>Nothing to see here...</value>
+  </data>
+  <data name="Uploads_title" xml:space="preserve">
+    <value>Uploads</value>
+  </data>
+  <data name="Uploads_upSelectionBtn" xml:space="preserve">
+    <value>Upload {0} Photos</value>
+  </data>
+  <data name="Camera_holdStill" xml:space="preserve">
+    <value>Please hold still....</value>
+  </data>
+  <data name="Camera_noAccess" xml:space="preserve">
+    <value>Unable to access the camera</value>
+  </data>
+  <data name="Camera_overlayErr" xml:space="preserve">
+    <value>Error downloading overlay image!</value>
+  </data>
+  <data name="Camera_permissionMessage" xml:space="preserve">
+    <value>MySkinSelfie requires camera permissions in order to function properly. Please enable camera access next time!</value>
+  </data>
+  <data name="Camera_permissionNeeded" xml:space="preserve">
+    <value>Camera permission is required!</value>
+  </data>
+  <data name="OfflineModeWarning" xml:space="preserve">
+    <value>Offline mode - connect to sync changes</value>
+  </data>
+  <data name="Oops" xml:space="preserve">
+    <value>Oops!</value>
+  </data>
+  <data name="PhotoCell_btnDeselect" xml:space="preserve">
+    <value>Deselect</value>
+  </data>
+  <data name="PhotoCell_btnSelect" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="UploadCell_btnDeselect" xml:space="preserve">
+    <value>Deselect</value>
+  </data>
+  <data name="UploadCell_btnSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Trans_BodyPartsSkinRegions" xml:space="preserve">
+    <value>{'LanguageKey':'en','Translations':{'Head':'Head','Neck':'Neck','Torso':'Torso','Arm':'Arm','Groin':'Groin','Buttock':'Buttock','Leg':'Leg','Full Face':'Full Face','Left Side of Face':'Left Side of Face','Right Side of Face':'Right Side of Face','Back of Head':'Back of Head','Top of Head':'Top of Head','Front of Neck':'Front of Neck','Back of Neck':'Back of Neck','Left Side of Neck':'Left Side of Neck','Right Side of Neck':'Right Side of Neck','Left Upper Arm':'Left Upper Arm','Left Forearm':'Left Forearm','Left Wrist':'Left Wrist','Left Hand':'Left Hand','Right Upper Arm':'Right Upper Arm','Right Forearm':'Right Forearm','Right Wrist':'Right Wrist','Right Hand':'Right Hand','Groin Area':'Groin Area','Left Thigh':'Left Thigh','Left Back of Thigh':'Left Back of Thigh','Left Knee':'Left Knee','Left Shin':'Left Shin','Left Calf':'Left Calf','Left Ankle':'Left Ankle','Left Foot':'Left Foot','Right Thigh':'Right Thigh','Right Back of Thigh':'Right Back of Thigh','Right Knee':'Right Knee','Right Shin':'Right Shin','Right Calf':'Right Calf','Right Ankle':'Right Ankle','Right Foot':'Right Foot','Chest':'Chest','Stomach':'Stomach','Upper Back':'Upper Back','Lower Back':'Lower Back','Left Side':'Left Side','Left Shoulder':'Left Shoulder','Left Shoulder Blade':'Left Shoulder Blade','Right Side':'Right Side','Right Shoulder':'Right Shoulder','Right Shoulder Blade':'Right Shoulder Blade','Left Buttock':'Left Buttock','Right Buttock':'Right Buttock'}}</value>
+  </data>
+  <data name="ContactList_title" xml:space="preserve">
+    <value>Choose Contact</value>
+  </data>
+  <data name="ManageSharesPage_confirmRevokeMessage" xml:space="preserve">
+    <value>Revoke {0}'s access to the album '{1}'?</value>
+  </data>
+  <data name="ManageSharesPage_noShares" xml:space="preserve">
+    <value>No active shares found! </value>
+  </data>
+  <data name="ManageSharesPage_serverGetError" xml:space="preserve">
+    <value>Failed to get your shares from the server, please check your connection and try again later</value>
+  </data>
+  <data name="ManageSharesPage_title" xml:space="preserve">
+    <value>Your Shares</value>
+  </data>
+  <data name="NewSharePage_contactBtn" xml:space="preserve">
+    <value>Select Contact</value>
+  </data>
+  <data name="NewSharePage_emailPrompt" xml:space="preserve">
+    <value>Enter the email of the person you want to share with:</value>
+  </data>
+  <data name="NewSharePage_error" xml:space="preserve">
+    <value>Sharing error:</value>
+  </data>
+  <data name="NewSharePage_finishBtn" xml:space="preserve">
+    <value>Share Album</value>
+  </data>
+  <data name="NewSharePage_header" xml:space="preserve">
+    <value>Share your album '{0}'</value>
+  </data>
+  <data name="NewSharePage_revokeReminder" xml:space="preserve">
+    <value>Remember: You can revoke shared access from the settings menu at any time.</value>
+  </data>
+  <data name="NewSharePage_success" xml:space="preserve">
+    <value>Your album has been shared!</value>
+  </data>
+  <data name="NewSharePage_timePicker" xml:space="preserve">
+    <value>Choose time frame</value>
+  </data>
+  <data name="NewSharePage_timePrompt" xml:space="preserve">
+    <value>For how long do you want to share this album with this person?</value>
+  </data>
+  <data name="NewSharePage_time_1Month" xml:space="preserve">
+    <value>One month</value>
+  </data>
+  <data name="NewSharePage_time_1Week" xml:space="preserve">
+    <value>One week</value>
+  </data>
+  <data name="NewSharePage_time_1Year" xml:space="preserve">
+    <value>One year</value>
+  </data>
+  <data name="NewSharePage_time_2Weeks" xml:space="preserve">
+    <value>Two weeks</value>
+  </data>
+  <data name="NewSharePage_time_6Months" xml:space="preserve">
+    <value>Six months</value>
+  </data>
+  <data name="NewSharePage_time_forever" xml:space="preserve">
+    <value>Forever</value>
+  </data>
+  <data name="NewSharePage_title" xml:space="preserve">
+    <value>Share album</value>
+  </data>
+  <data name="Main_manageShares" xml:space="preserve">
+    <value>Manage Shares</value>
+  </data>
+  <data name="ManageSharesPage_deleteConfirm" xml:space="preserve">
+    <value>Revoke</value>
+  </data>
+  <data name="ManageSharesPage_deleteErr" xml:space="preserve">
+    <value>An error occurred while revoking access, please try again later.</value>
+  </data>
+  <data name="ManageSharesPage_deleteSuccess" xml:space="preserve">
+    <value>Successfully revoked access!</value>
+  </data>
+  <data name="ManageSharesPage_deleteTitle" xml:space="preserve">
+    <value>Revoke access?</value>
+  </data>
+  <data name="NewSharePage_successTitle" xml:space="preserve">
+    <value>Share successful</value>
+  </data>
+  <data name="Main_manageStudies" xml:space="preserve">
+    <value>Manage Studies</value>
+  </data>
+  <data name="NewSharePage_studyButton" xml:space="preserve">
+    <value>From Studies</value>
+  </data>
+  <data name="StudyListPage_codeInvalid" xml:space="preserve">
+    <value>Invalid code!</value>
+  </data>
+  <data name="StudyListPage_codeMessage" xml:space="preserve">
+    <value>Please enter the share code for the study you wish to join:</value>
+  </data>
+  <data name="StudyListPage_codeSuccess" xml:space="preserve">
+    <value>Successfully enrolled!</value>
+  </data>
+  <data name="StudyListPage_codeTitle" xml:space="preserve">
+    <value>Enter Code</value>
+  </data>
+  <data name="StudyListPage_connectionErr" xml:space="preserve">
+    <value>Unable to retrieve your studies, please try again later.</value>
+  </data>
+  <data name="StudyListPage_deleteConfirmBtn" xml:space="preserve">
+    <value>Leave study</value>
+  </data>
+  <data name="StudyListPage_deleteConfirmMessage" xml:space="preserve">
+    <value>Do you really want to leave the study '{0}'?</value>
+  </data>
+  <data name="StudyListPage_deleteConfirmTitle" xml:space="preserve">
+    <value>Unenrol from study?</value>
+  </data>
+  <data name="StudyListPage_deleteErr" xml:space="preserve">
+    <value>There was an error while unenrolling you from the study, please try again later.</value>
+  </data>
+  <data name="StudyListPage_deleteSuccess" xml:space="preserve">
+    <value>Successfully unenrolled!</value>
+  </data>
+  <data name="StudyListPage_join" xml:space="preserve">
+    <value>Join</value>
+  </data>
+  <data name="StudyListPage_noStudies" xml:space="preserve">
+    <value>You're not part of any studies yet!</value>
+  </data>
+  <data name="StudyListPage_title" xml:space="preserve">
+    <value>Your Enrolled Studies</value>
+  </data>
+</root>

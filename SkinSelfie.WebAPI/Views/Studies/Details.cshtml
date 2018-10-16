@@ -1,0 +1,85 @@
+﻿@model SkinSelfie.WebAPI.Models.Study
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    SkinSelfie.WebAPI.Models.Study study = PageData["study"];
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Participants</h4>
+    <hr />
+    
+    <table class="table">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Added On
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.StudyEnrolments)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedAt)
+                </td>
+                <td>
+                    @using (Html.BeginForm("Unenroll", "studies"))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("enrolId", item.Id)
+                        @Html.Hidden("studyId", Model.Id)
+                        <div class="form-actions no-color">
+                            <input type="submit" value="Unenroll" class="btn btn-default" />
+                        </div>
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Add A Participant</h4>
+        <hr />
+        <div class="form-group">
+            <div class="col-md-10">
+                Email <br />
+                @Html.TextBox("email")
+            </div>
+        </div>
+        @Html.HiddenFor(model => model.Id)
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Add User" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,10 @@
+﻿<resources>
+  <style name="Theme.SkinSelfie" parent="Theme.SkinSelfie.Base">
+  </style>
+  
+  <style name="Theme.SkinSelfie.Base" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/appMain</item>
+    <item name="colorPrimaryDark">@color/appDark</item>
+    <item name="colorAccent">@color/appMain</item>
+  </style>
+</resources>

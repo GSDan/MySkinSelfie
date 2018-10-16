@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Camera_adjustOverlay" xml:space="preserve">
+    <value>Adjustar superposición</value>
+  </data>
+  <data name="Camera_hideSlider" xml:space="preserve">
+    <value>Ocultar control deslizante</value>
+  </data>
+  <data name="Camera_permissionReq" xml:space="preserve">
+    <value>¡Se requiere permiso de la cámara!</value>
+  </data>
+  <data name="Camera_tip1_message" xml:space="preserve">
+    <value>Las mejores fotos estarán bien iluminadas y tendrán un buen contraste entre tu piel y el fondo. ¡Intenta asegurarte que seas capaz de replicar estas condiciones en cada foto!</value>
+  </data>
+  <data name="Camera_tip1_title" xml:space="preserve">
+    <value>Consejos para tomar fotos #1</value>
+  </data>
+  <data name="Camera_tip2_message" xml:space="preserve">
+    <value>En la foto de la afección que tomes posteriormente verás superpuesta la primera foto que tomaste. Trata de alinear tu nueva imagen con la imagen superpuesta para ser lo más coherente posible! Puede ajustar la visibilidad de la superposición pulsando el botón 'Ajustar superposición'.</value>
+  </data>
+  <data name="Camera_tip2_title" xml:space="preserve">
+    <value>Consejos para tomar fotos #2</value>
+  </data>
+  <data name="Camera_title" xml:space="preserve">
+    <value>Toma una foto</value>
+  </data>
+  <data name="ChangePass_confirmPass" xml:space="preserve">
+    <value>Confirma la nueva contraseña:</value>
+  </data>
+  <data name="ChangePass_confirmPassTemp" xml:space="preserve">
+    <value>Confirma la nueva contraseña</value>
+  </data>
+  <data name="ChangePass_currentPass" xml:space="preserve">
+    <value>Tu contraseña actual:</value>
+  </data>
+  <data name="ChangePass_currentPassTemp" xml:space="preserve">
+    <value>Contraseña actual</value>
+  </data>
+  <data name="ChangePass_error" xml:space="preserve">
+    <value>Error en Cambio de Contraseña</value>
+  </data>
+  <data name="ChangePass_newPass" xml:space="preserve">
+    <value>Tu nueva contraseña</value>
+  </data>
+  <data name="ChangePass_newPassTemp" xml:space="preserve">
+    <value>Nueva contraseña</value>
+  </data>
+  <data name="ChangePass_successMessage" xml:space="preserve">
+    <value>Tu contraseña ha sido cambiada. Por favor, inicie de nuevo la sesión</value>
+  </data>
+  <data name="ChangePass_successTitle" xml:space="preserve">
+    <value>Lo lograste!</value>
+  </data>
+  <data name="ChangePass_title" xml:space="preserve">
+    <value>Cambiar contraseña</value>
+  </data>
+  <data name="ConditionEdit_blurbEdit" xml:space="preserve">
+    <value>Modifique la información a continuación según sea necesario y luego confirme los cambios presionando la marca de aprobación en la esquina superior derecha.</value>
+  </data>
+  <data name="ConditionEdit_blurbNew" xml:space="preserve">
+    <value>Para comenzar a hacerle seguimiento a una nueva afección de la piel, seleccione la parte del cuerpo y región de la piel. Registrar el tratamiento actual y la fecha de inicio de la afección le ayudará a monitorear el progreso de la condición.</value>
+  </data>
+  <data name="ConditionEdit_bodyPart" xml:space="preserve">
+    <value>Zona del cuerpo</value>
+  </data>
+  <data name="ConditionEdit_bodyPartHead" xml:space="preserve">
+    <value>Escoja zona del cuerpo:</value>
+  </data>
+  <data name="ConditionEdit_conditionName" xml:space="preserve">
+    <value>Nombre de la afección</value>
+  </data>
+  <data name="ConditionEdit_conditionNameError" xml:space="preserve">
+    <value>Por favor nombre la afección.</value>
+  </data>
+  <data name="ConditionEdit_conditionNameHead" xml:space="preserve">
+    <value>¿Cuál es el nombre de esta afección?</value>
+  </data>
+  <data name="ConditionEdit_confirm" xml:space="preserve">
+    <value>Agrega la afección'{0}' como si fuse tu {1}? Podrás editar estos detalles luego</value>
+    <comment>{0} - Condition name
+{1} - Skin Region name</comment>
+  </data>
+  <data name="ConditionEdit_confirmTitle" xml:space="preserve">
+    <value>Confirma nueva afección</value>
+  </data>
+  <data name="ConditionEdit_delete" xml:space="preserve">
+    <value>Elimina afección</value>
+  </data>
+  <data name="ConditionEdit_deleteError" xml:space="preserve">
+    <value>Hubo un error mientras intentabas eliminar la afección. Por favor inténtalo nuevamente.</value>
+  </data>
+  <data name="ConditionEdit_deleteSuccessMessage" xml:space="preserve">
+    <value>¡Afección eliminada correctamente!</value>
+  </data>
+  <data name="ConditionEdit_deleteSuccessTitle" xml:space="preserve">
+    <value>Eliminación completada</value>
+  </data>
+  <data name="ConditionEdit_deleteWarningMessage" xml:space="preserve">
+    <value>¿Estás seguro que quieres eliminar esta afección y todas las imágenes asociadas a ella? ¡Esta acción no se puede deshacer!</value>
+  </data>
+  <data name="ConditionEdit_deleteWarningTitle" xml:space="preserve">
+    <value>¿Eliminar afección?</value>
+  </data>
+  <data name="ConditionEdit_finished" xml:space="preserve">
+    <value>Terminado</value>
+  </data>
+  <data name="ConditionEdit_markFinished" xml:space="preserve">
+    <value>Marca como terminado:</value>
+  </data>
+  <data name="ConditionEdit_passcode" xml:space="preserve">
+    <value>Necesita contraseña:</value>
+  </data>
+  <data name="ConditionEdit_reminderEnabled" xml:space="preserve">
+    <value>Habilitar recordatorios:</value>
+  </data>
+  <data name="ConditionEdit_reminderFreq" xml:space="preserve">
+    <value>Frecuencia de recordatorio</value>
+  </data>
+  <data name="ConditionEdit_skinRegion" xml:space="preserve">
+    <value>Región de la Piel</value>
+  </data>
+  <data name="ConditionEdit_skinRegionHead" xml:space="preserve">
+    <value>Escoje una región de la piel dentro de esa área:</value>
+  </data>
+  <data name="ConditionEdit_startDate" xml:space="preserve">
+    <value>¿Cuando se inició el problema?</value>
+  </data>
+  <data name="ConditionEdit_submitError" xml:space="preserve">
+    <value>Hubo un error mientras intentabas enviar la nueva afección:
+</value>
+  </data>
+  <data name="ConditionEdit_titleEdit" xml:space="preserve">
+    <value>Editando '{0}'</value>
+    <comment>{0} - existing.Condition</comment>
+  </data>
+  <data name="ConditionEdit_titleNew" xml:space="preserve">
+    <value>Agrega nueva afección</value>
+  </data>
+  <data name="ConditionEdit_updateError" xml:space="preserve">
+    <value>Hubo un error al intentar actualizar la afección. Por favor inténtalo más tarde.</value>
+  </data>
+  <data name="ConditionEdit_updateSuccess" xml:space="preserve">
+    <value>¡Afección actualizada correctamente!</value>
+  </data>
+  <data name="CreateAcc_btn_submit" xml:space="preserve">
+    <value>Envía</value>
+  </data>
+  <data name="CreateAcc_confirmMessage" xml:space="preserve">
+    <value>Al pulsar tu confirmas que: 
+
+Yo se que esta aplicación no reemplaza el tratamiento o asesoramiento profesional y si tengo dudas sobre mi piel, debo buscar asesoramiento o diagnostico con mi médico de cabecera. 
+</value>
+  </data>
+  <data name="CreateAcc_confirmTitle" xml:space="preserve">
+    <value>Por favor confirma</value>
+  </data>
+  <data name="CreateAcc_dob" xml:space="preserve">
+    <value>Tu fecha de nacimiento: </value>
+  </data>
+  <data name="CreateAcc_email" xml:space="preserve">
+    <value>Dirección de correo electrónico</value>
+  </data>
+  <data name="CreateAcc_emailTemp" xml:space="preserve">
+    <value>email@ejemplo.com</value>
+  </data>
+  <data name="CreateAcc_errorTitle" xml:space="preserve">
+    <value>Error al crear cuenta</value>
+  </data>
+  <data name="CreateAcc_name" xml:space="preserve">
+    <value>Tu nombre completo:</value>
+  </data>
+  <data name="CreateAcc_nameTemp" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="CreateAcc_password" xml:space="preserve">
+    <value>Tu contraseña:</value>
+  </data>
+  <data name="CreateAcc_passwordConfirm" xml:space="preserve">
+    <value>Confirma contraseña</value>
+  </data>
+  <data name="CreateAcc_passwordMismatchMessage" xml:space="preserve">
+    <value>¡Vaya! Asegurate que hayas colocado tu contraseña correctamente!</value>
+  </data>
+  <data name="CreateAcc_passwordMismatchTitle" xml:space="preserve">
+    <value>¡Las contraseñas no concuerdan!</value>
+  </data>
+  <data name="CreateAcc_passwordTemp" xml:space="preserve">
+    <value>Tu contraseña</value>
+  </data>
+  <data name="CreateAcc_successMessage" xml:space="preserve">
+    <value>¡Tu cuenta ha sido creada satisfactoriamente!
+Se te ha enviado un correo electrónico a {0} con un enlace de verificación. Por favor, haz clic en él para confirmar que la dirección de correo electrónico es la correcta.</value>
+    <comment>{0} - user's email</comment>
+  </data>
+  <data name="CreateAcc_successTitle" xml:space="preserve">
+    <value>¡Bienvenido!</value>
+  </data>
+  <data name="CreateAcc_title" xml:space="preserve">
+    <value>Crea una nueva cuenta</value>
+  </data>
+  <data name="Dialog_agree" xml:space="preserve">
+    <value>Estoy de acuerdo</value>
+  </data>
+  <data name="Dialog_cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Dialog_cancelled" xml:space="preserve">
+    <value>Cancelado</value>
+  </data>
+  <data name="Dialog_confirm" xml:space="preserve">
+    <value>Confirmado</value>
+  </data>
+  <data name="Dialog_delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="Dialog_error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Dialog_loading" xml:space="preserve">
+    <value>Un momento...</value>
+  </data>
+  <data name="Dialog_success" xml:space="preserve">
+    <value>Éxito</value>
+  </data>
+  <data name="Dialog_understand" xml:space="preserve">
+    <value>¡Lo tengo!</value>
+  </data>
+  <data name="Disclaimer_appIntent" xml:space="preserve">
+    <value> Esta aplicación está diseñada para ayudarle a monitorizar sus afecciones cutáneas y lesiones. Si usted está preocupado por su piel, busque asesoramiento o diagnóstico donde su médico de cabecera o dermatólogo.</value>
+  </data>
+  <data name="Disclaimer_btn_agree" xml:space="preserve">
+    <value>Entiendo y &amp; Acepto</value>
+  </data>
+  <data name="Disclaimer_imageControl" xml:space="preserve">
+    <value>Las imágenes tomadas con esta aplicación se almacenan de forma segura en el servidor MySkinSelfie separadas de otras imágenes en tu dispositivo, lo que significa que otras personas no las visualizarán en tu galería / rollo de cámara. Tu tienes el control de quién puede ver tus fotos y puedes eliminarlas en cualquier momento.</value>
+  </data>
+  <data name="Disclaimer_notTreatment" xml:space="preserve">
+    <value>!Esta aplicación no sustituye el tratamiento o consejo indicado por un profesional¡</value>
+  </data>
+  <data name="Disclaimer_thanks" xml:space="preserve">
+    <value>¡Gracias por descargar MySkinSelfie!</value>
+  </data>
+  <data name="Error_connection" xml:space="preserve">
+    <value>Por favor revisa tu conexión de Internet y vuelve a intentarlo.</value>
+  </data>
+  <data name="Error_delete" xml:space="preserve">
+    <value>Error de eliminación</value>
+  </data>
+  <data name="Error_update" xml:space="preserve">
+    <value>Error de actualización</value>
+  </data>
+  <data name="Gallery_compareCount" xml:space="preserve">
+    <value>Compara {0}/{1}</value>
+    <comment>{0} - number selected
+{1} - Max compare</comment>
+  </data>
+  <data name="Gallery_compareTooFewMessage" xml:space="preserve">
+    <value>Por favor selecciona 2 fotos para compararlas.</value>
+  </data>
+  <data name="Gallery_compareTooFewTitle" xml:space="preserve">
+    <value>!Haz seleccionado solamente una foto!</value>
+  </data>
+  <data name="Gallery_compareTooManyMessage" xml:space="preserve">
+    <value>Deselecciona otra foto para agregar ésta.</value>
+  </data>
+  <data name="Gallery_compareTooManyTitle" xml:space="preserve">
+    <value>¡Solamente {0} fotos pueden ser comparadas!</value>
+    <comment>{0} - max compare</comment>
+  </data>
+  <data name="Gallery_edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Gallery_noPasscode" xml:space="preserve">
+    <value>Para mayor seguridad, bloquea esta afección con un código PIN en el área de configuración.</value>
+  </data>
+  <data name="Gallery_selected" xml:space="preserve">
+    <value>Seleccionado</value>
+  </data>
+  <data name="Gallery_takeNew" xml:space="preserve">
+    <value>Tome nueva foto</value>
+  </data>
+  <data name="Gallery_welcome1" xml:space="preserve">
+    <value>!Presiona arriba en el botón de la cámara para tomar tu primera foto de esta afección!</value>
+  </data>
+  <data name="Gallery_welcome2" xml:space="preserve">
+    <value>Crear nuevas carpetas para cada afección cutánea o localización anatómica te ayudará a organizar tus fotos y hacer un seguimiento de ellas en el tiempo.</value>
+  </data>
+  <data name="Gallery_welcome3" xml:space="preserve">
+    <value>No te preocupes - las fotos que tomes no serán agregadas la galería fotográfica de tu dispositivo.</value>
+  </data>
+  <data name="Login_btn_login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_error" xml:space="preserve">
+    <value>Se ha producido un error al iniciar la sesión. Asegúrate que estés conectado a Internet y que tus datos sean correctos.</value>
+  </data>
+  <data name="Login_errorNoEmail" xml:space="preserve">
+    <value>Por favor introduce la dirección de correo electrónico asociada a esta cuenta.</value>
+  </data>
+  <data name="Login_title" xml:space="preserve">
+    <value>Inicia sesión en una cuenta existente</value>
+  </data>
+  <data name="Main_activeCollections" xml:space="preserve">
+    <value>Colecciones activas</value>
+  </data>
+  <data name="Main_add" xml:space="preserve">
+    <value>Agrega nuevo</value>
+  </data>
+  <data name="Main_authErr" xml:space="preserve">
+    <value>Se produjo un error al recuperar tus datos. Reinicia la sesión.</value>
+  </data>
+  <data name="Main_connectionErr" xml:space="preserve">
+    <value>Se produjo un error al recuperar tu contenido desde el servidor. Por favor revisa tu conexión y prueba de nuevo mas tarde.</value>
+  </data>
+  <data name="Main_feedbackMessage" xml:space="preserve">
+    <value>¡Gracias por probar MySkinSelfie! Te estamos muy agradecidos. Si aún no lo has hecho, por favor rellena el cuestionario.</value>
+  </data>
+  <data name="Main_feedbackOk" xml:space="preserve">
+    <value>Questionario abierto</value>
+  </data>
+  <data name="Main_feedbackTitle" xml:space="preserve">
+    <value>Por favor, danos tu opinión</value>
+  </data>
+  <data name="Main_finishedCollections" xml:space="preserve">
+    <value>Colecciones terminadas</value>
+  </data>
+  <data name="Main_loadingAppData" xml:space="preserve">
+    <value>Actualizando datos de la aplicación...</value>
+  </data>
+  <data name="Main_loadingUserContent" xml:space="preserve">
+    <value>Obteniendo tu contenido...</value>
+  </data>
+  <data name="Main_settings" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="Main_title" xml:space="preserve">
+    <value>MySkinSelfie</value>
+  </data>
+  <data name="Main_welcome1" xml:space="preserve">
+    <value>Binevenido a  MySkinSelfie, el aplicativo para monitorizar la piel.</value>
+  </data>
+  <data name="Main_welcome2" xml:space="preserve">
+    <value>Ayuda a tu médico y a ti  mismo a diagnosticar y gestionar tus problemas cutáneos registrando la apariencia, los cambios y la respuesta a tratamiento de cualquier afección de la piel, de las uñas y del cuero cabelludo.</value>
+  </data>
+  <data name="Main_welcome3" xml:space="preserve">
+    <value>Guarda  imágenes  etiquetadas y con fecha de forma privada  y segura lejos de tu galería.</value>
+  </data>
+  <data name="Main_welcome4" xml:space="preserve">
+    <value>Para comenzar, crea una nueva carpeta pulsando el botón en la parte superior derecha.</value>
+  </data>
+  <data name="PhotoCarousel_Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="PhotoCompare_title" xml:space="preserve">
+    <value>Comparando {0} fotos</value>
+    <comment>{0} - compare count</comment>
+  </data>
+  <data name="PhotoEdit_delete" xml:space="preserve">
+    <value>Eliminar foto</value>
+  </data>
+  <data name="PhotoEdit_deleteConfirmMessage" xml:space="preserve">
+    <value>¿Estás seguro que quieres eliminar esta foto? 
+!Esta acción no se puede deshacer!</value>
+  </data>
+  <data name="PhotoEdit_deleteConfirmTitle" xml:space="preserve">
+    <value>¿Eliminar foto?</value>
+  </data>
+  <data name="PhotoEdit_deleteConfirmYes" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="PhotoEdit_deleteErr" xml:space="preserve">
+    <value>Se ha producido un error mientras se eliminaba tu foto. Vuelve a intentarlo más tarde</value>
+  </data>
+  <data name="PhotoEdit_deleteSuccess" xml:space="preserve">
+    <value>!Foto eliminada!</value>
+  </data>
+  <data name="PhotoEdit_finished" xml:space="preserve">
+    <value>Completado</value>
+  </data>
+  <data name="PhotoEdit_notes" xml:space="preserve">
+    <value>Anotaciones</value>
+  </data>
+  <data name="PhotoEdit_shotConditions" xml:space="preserve">
+    <value>Condiciones al fotografiar</value>
+  </data>
+  <data name="PhotoEdit_treatment" xml:space="preserve">
+    <value>Tratamiento</value>
+  </data>
+  <data name="PhotoEdit_updateErr" xml:space="preserve">
+    <value>Se ha producido un error al actualizar tu foto- Por favor vuelve a intentarlo más tarde.</value>
+  </data>
+  <data name="PhotoEdit_updateSuccess" xml:space="preserve">
+    <value>¡Foto actualizada exitosamente!</value>
+  </data>
+  <data name="PhotoEdit_uploadErr" xml:space="preserve">
+    <value>Se ha producido un error al cargar tu foto- Por favor vuelve a intentarlo más tarde.</value>
+  </data>
+  <data name="PhotoEdit_uploadSuccess" xml:space="preserve">
+    <value>¡Foto cargada exitosamente!</value>
+  </data>
+  <data name="ResetPassword_failure" xml:space="preserve">
+    <value>Se ha producido un error al intentar reestablecer tu contraseña. Asegúrate que estás conectado a Internet.</value>
+  </data>
+  <data name="ResetPassword_message" xml:space="preserve">
+    <value>Introduce la dirección de correo electrónico asociada a tu cuenta a continuación y te enviaremos una nueva contraseña:</value>
+  </data>
+  <data name="ResetPassword_success" xml:space="preserve">
+    <value>Tu contraseña ha sido cambiada. Comprueba la bandeja de entrada de tu correo electrónico para obtener la nueva contraseña.</value>
+  </data>
+  <data name="ResetPassword_title" xml:space="preserve">
+    <value>Introduce tu correo electrónico</value>
+  </data>
+  <data name="Settings_accountHeader" xml:space="preserve">
+    <value>Configuración de la cuenta</value>
+  </data>
+  <data name="Settings_addPIN" xml:space="preserve">
+    <value>Añade un PIN de seguridad</value>
+  </data>
+  <data name="Settings_addPINEnter" xml:space="preserve">
+    <value>Introduce un nuevo PIN</value>
+  </data>
+  <data name="Settings_addPINSuccess" xml:space="preserve">
+    <value>¡PIN de seguridad agregado!</value>
+  </data>
+  <data name="Settings_appHeader" xml:space="preserve">
+    <value>Ajustes del aplicativo</value>
+  </data>
+  <data name="Settings_changePassword" xml:space="preserve">
+    <value>Cambia la contraseña</value>
+  </data>
+  <data name="Settings_changePIN" xml:space="preserve">
+    <value>Cambia el PIN de seguridad</value>
+  </data>
+  <data name="Settings_dangerHeader" xml:space="preserve">
+    <value>Ajustes Peligrosos</value>
+  </data>
+  <data name="Settings_deleteAcc" xml:space="preserve">
+    <value>Ajustes Peligrosos</value>
+  </data>
+  <data name="Settings_deleteAccFailure" xml:space="preserve">
+    <value>Se ha producido un problema al eliminar tu cuenta.</value>
+  </data>
+  <data name="Settings_deleteAccSafeWord" xml:space="preserve">
+    <value>ELIMINAR</value>
+  </data>
+  <data name="Settings_deleteAccSafeWordMismatch" xml:space="preserve">
+    <value>¡No escribiste '{0}'!</value>
+    <comment>{0} - Settings_deleteAccSafeWord</comment>
+  </data>
+  <data name="Settings_deleteAccSuccess" xml:space="preserve">
+    <value>Tu cuenta ha sido eliminada correctamente.</value>
+  </data>
+  <data name="Settings_deleteAccWarning" xml:space="preserve">
+    <value>¡Al hacer esto borrarás de forma permanente toda la información de tu cuenta y las fotos del servidor! 
+    Si está seguro de que deseas hacerlo, escribe '{0}' en el cuadro de abajo:</value>
+    <comment>{0} - Settings_deleteAccSafeWord</comment>
+  </data>
+  <data name="Settings_logOut" xml:space="preserve">
+    <value>Cerrar sesión</value>
+  </data>
+  <data name="Settings_logOutConfirm" xml:space="preserve">
+    <value>¿Seguro que quieres salir de MySkinSelfie? Necesitarás tu nombre de usuario y contraseña para iniciar nuevamente la sesión.</value>
+  </data>
+  <data name="Settings_logoutConfirmTitle" xml:space="preserve">
+    <value>Confirmar cierre de sesión</value>
+  </data>
+  <data name="Settings_removePIN" xml:space="preserve">
+    <value>Eliminar PIN de seguridad</value>
+  </data>
+  <data name="Settings_removePINEnter" xml:space="preserve">
+    <value>Para continuar, introduce tu PIN actual</value>
+  </data>
+  <data name="Settings_removePINSuccess" xml:space="preserve">
+    <value>¡Protección por PIN eliminada!</value>
+  </data>
+  <data name="Settings_resendEmail" xml:space="preserve">
+    <value>Reenviar correo electrónico de confirmación</value>
+  </data>
+  <data name="Settings_resendEmailFail" xml:space="preserve">
+    <value>¡Error al enviar correo electrónico!</value>
+  </data>
+  <data name="Settings_resendEmailSuccess" xml:space="preserve">
+    <value>Correo electrónico enviado. Espera unos minutos para que llegue.</value>
+  </data>
+  <data name="Settings_resetPassword" xml:space="preserve">
+    <value>Restablece la contraseña</value>
+  </data>
+  <data name="Settings_resetPasswordFailure" xml:space="preserve">
+    <value>Se ha producido un error al intentar restablecer tu contraseña.</value>
+  </data>
+  <data name="Settings_resetPasswordSuccess" xml:space="preserve">
+    <value>Tu contraseña ha sido cambiada. Comprueba tu bandeja de entrada de correo electrónico para obtener la nueva contraseña y accede nuevamente.</value>
+  </data>
+  <data name="Settings_resetPasswordWarning" xml:space="preserve">
+    <value>Tu nueva contraseña se enviará a tu dirección de correo electrónico registrada: {0}.Tendrás que tener acceso a esta dirección para volver a iniciar sesión en Skin Selfie. ¿Estás seguro de que quieres hacer esto? </value>
+    <comment>{0} - user's email</comment>
+  </data>
+  <data name="Settings_title" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="Settings_warning" xml:space="preserve">
+    <value>¡ADVERTENCIA!</value>
+  </data>
+  <data name="Unlock_blurbNew" xml:space="preserve">
+    <value>Introduce un nuevo PIN para bloquear la aplicación.</value>
+  </data>
+  <data name="Unlock_blurbUnlock" xml:space="preserve">
+    <value>Introduce tu PIN para continuar.</value>
+  </data>
+  <data name="Unlock_btnForgot" xml:space="preserve">
+    <value>¿Olvidaste el PIN?</value>
+  </data>
+  <data name="Unlock_btnNew" xml:space="preserve">
+    <value>Agrega el PIN</value>
+  </data>
+  <data name="Unlock_btnUnlock" xml:space="preserve">
+    <value>Desbloquea</value>
+  </data>
+  <data name="Unlock_confirm" xml:space="preserve">
+    <value>Por favor confirma el PIN</value>
+  </data>
+  <data name="Unlock_confirmErr" xml:space="preserve">
+    <value>¡Los PIN introducidos no coinciden!!</value>
+  </data>
+  <data name="Unlock_folderForgotMessage" xml:space="preserve">
+    <value>Te podemos enviar un nuevo PIN para esta carpeta a tu correo electrónico. ¿Deseas restablecer este PIN y enviar uno nuevo a {0}?</value>
+    <comment>{0} - user email</comment>
+  </data>
+  <data name="Unlock_folderForgotOk" xml:space="preserve">
+    <value>Restablecer PIN</value>
+  </data>
+  <data name="Unlock_folderResetSuccess" xml:space="preserve">
+    <value>¡Revisa la bandeja de entrada de tu correo electrónico para obtener tu nuevo PIN!</value>
+  </data>
+  <data name="Unlock_forgotConfirm" xml:space="preserve">
+    <value>Desconectar</value>
+  </data>
+  <data name="Unlock_forgotMessage" xml:space="preserve">
+    <value>Salir y volver a ingresar restablecerá el PIN de la aplicación. ¿Quieres salir ahora?</value>
+  </data>
+  <data name="Unlock_forgotTitle" xml:space="preserve">
+    <value>¿Olvidaste tu PIN?</value>
+  </data>
+  <data name="Unlock_mismatch" xml:space="preserve">
+    <value>Por favor introduce el PIN correcto.</value>
+  </data>
+  <data name="Unlock_ohwtf" xml:space="preserve">
+    <value>Se produjo un error al recuperar tus datos. Por favor, inicia nuevamente la sesión.</value>
+  </data>
+  <data name="Unlock_resetErr" xml:space="preserve">
+    <value>Se produjo un error al restablecer el PIN.</value>
+  </data>
+  <data name="Unlock_titleNew" xml:space="preserve">
+    <value>Introduce un nuevo PIN</value>
+  </data>
+  <data name="Unlock_titleUnlock" xml:space="preserve">
+    <value>¡Aplicación bloqueada!</value>
+  </data>
+  <data name="Welcome_blurb" xml:space="preserve">
+    <value>Por favor, crea una cuenta o inicia sesión para continuar.</value>
+  </data>
+  <data name="Welcome_btn_createAcc" xml:space="preserve">
+    <value>Crea una cuenta nueva</value>
+  </data>
+  <data name="Welcome_btn_forgottenPassword" xml:space="preserve">
+    <value>¿Olvidaste la contraseña?</value>
+  </data>
+  <data name="Welcome_btn_signIn" xml:space="preserve">
+    <value> Inicia sesión en una cuenta existente</value>
+  </data>
+  <data name="Welcome_header" xml:space="preserve">
+    <value>¡Bienvenido a MySkinSelfie!</value>
+  </data>
+  <data name="Welcome_title" xml:space="preserve">
+    <value>Inicia session en MySkinSelfie</value>
+  </data>
+  <data name="App_loginError" xml:space="preserve">
+    <value>¡Error de acceso!</value>
+  </data>
+  <data name="App_passwordFailMessage" xml:space="preserve">
+    <value>¡Las contraseñas no concuerdan!</value>
+  </data>
+  <data name="App_passwordFailTitle" xml:space="preserve">
+    <value>Confirma la Contraseña </value>
+  </data>
+  <data name="App_pinPromptMessage" xml:space="preserve">
+    <value> ¿Quieres proteger la aplicación con un PIN?</value>
+  </data>
+  <data name="App_pinPromptNo" xml:space="preserve">
+    <value>Quizás más tarde</value>
+  </data>
+  <data name="App_pinPromptTitle" xml:space="preserve">
+    <value>¿Agrega un PIN?</value>
+  </data>
+  <data name="App_pinPromptYes" xml:space="preserve">
+    <value>Agrega un PIN</value>
+  </data>
+  <data name="Main_shareComingSoon" xml:space="preserve">
+    <value> La posibilidad de compartir tus archivos de fotos con otros usuarios de MySkinSelfie estará disponible a corto plazo.
+¡Está pendiente de este espacio!</value>
+  </data>
+  <data name="Help_controlBody" xml:space="preserve">
+    <value>Los archivos que has cargado a MySkinSelfie están bajo tu control al igual que tus datos. En cualquier momento puedes elegir borrar de manera permanente una imagen, una afección cutánea registrada o incluso toda tu cuenta de la nube.</value>
+  </data>
+  <data name="Help_controlHeading" xml:space="preserve">
+    <value>Estás en Control</value>
+  </data>
+  <data name="Help_funcBody" xml:space="preserve">
+    <value> MySkinSelfie  es una gran herramienta para realizar seguimiento del progreso de las afecciones cutáneas gracias a su sistema de superposición que te permite tomar fotografías concordantes en el tiempo. Conserva sus fotos organizadas por ubicación anatómica de la afección y permite seguimiento monitorizar cambios gracias a su práctica herramienta de comparación. Las imágenes que tomas se almacenan en la nube, lo que significa que puedes acceder a ellas a través de múltiples dispositivos y durante años. Es perfecto para el seguimiento a largo plazo de las afecciones.</value>
+  </data>
+  <data name="Help_funcHeading" xml:space="preserve">
+    <value>Haz seguimiento de tus progresos</value>
+  </data>
+  <data name="Help_heading" xml:space="preserve">
+    <value>MySkinSelfie hace que sea más fácil el seguimiento en el tiempo de tus afecciones cutáneas.</value>
+  </data>
+  <data name="Help_securityBody" xml:space="preserve">
+    <value> Las fotos tomadas en MySkinSelfie se suben a nuestros servidores en la nube a través de una conexión segura. Todos los archivos cargados están encriptados, lo que significa que puedes estar seguro de que nadie tendrá acceso a imágenes susceptibles. ¡Las fotos se mantienen por defecto fuera de la galería de imágenes de tu dispositivo e incluso tiene la opción de bloquear la aplicación con un PIN, evitando cualquier posible situación embarazosa!</value>
+  </data>
+  <data name="Help_securityHeading" xml:space="preserve">
+    <value>Seguro &amp; Sonido</value>
+  </data>
+  <data name="Help_shareBody" xml:space="preserve">
+    <value>Con una futura actualización, podrás compartir las imágenes que has tomado con otros usuarios de MySkinSelfie, !Está pendiente en este mismo espacio!</value>
+  </data>
+  <data name="Help_shareHeading" xml:space="preserve">
+    <value>Comparte tus progresos- ¡Próximamente!</value>
+  </data>
+  <data name="Help_title" xml:space="preserve">
+    <value>A cerca de MySkinSelfie</value>
+  </data>
+  <data name="Main_help" xml:space="preserve">
+    <value>A cerca de</value>
+  </data>
+  <data name="Gallery_needPerms" xml:space="preserve">
+    <value>Por favor permita acceso a la cámara para continuar</value>
+  </data>
+  <data name="PhotoEdit_AddedToQueue" xml:space="preserve">
+    <value>¡Esta foto se ha añadido a tu cola de subida!</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_message" xml:space="preserve">
+    <value>Asegúrate de estar en WiFi para evitar cargos de datos al subir tus fotos. Puede acceder a su cola de carga en cualquier momento desde la pantalla principal de la aplicación.</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_now" xml:space="preserve">
+    <value>Cargar ahora</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_queue" xml:space="preserve">
+    <value>Subir más tarde</value>
+  </data>
+  <data name="PhotoEdit_QueueOrUpload_title" xml:space="preserve">
+    <value>¿Subir ahora o más tarde?</value>
+  </data>
+  <data name="Uploads_allBtn" xml:space="preserve">
+    <value>Subir todo</value>
+  </data>
+  <data name="Uploads_btn" xml:space="preserve">
+    <value>Cargas</value>
+  </data>
+  <data name="Uploads_dataWarning" xml:space="preserve">
+    <value>Asegúrate de estar en WiFi para evitar cargos de datos al subir tus fotos.</value>
+  </data>
+  <data name="Uploads_dataWarningContinue" xml:space="preserve">
+    <value>Empezar a subir</value>
+  </data>
+  <data name="Uploads_noneMessage" xml:space="preserve">
+    <value>No tienes ninguna subida pendiente. Si toma una foto sin conexión, aparecerá aquí para más tarde.</value>
+  </data>
+  <data name="Uploads_noneTitle" xml:space="preserve">
+    <value>Nada que ver aqui...</value>
+  </data>
+  <data name="Uploads_title" xml:space="preserve">
+    <value>Cola de carga</value>
+  </data>
+  <data name="Uploads_upSelectionBtn" xml:space="preserve">
+    <value>Sube {0} fotos</value>
+  </data>
+  <data name="Camera_holdStill" xml:space="preserve">
+    <value>Por favor, quédate quieto...</value>
+  </data>
+  <data name="Camera_noAccess" xml:space="preserve">
+    <value>¡No se puede acceder a la cámara!</value>
+  </data>
+  <data name="Camera_overlayErr" xml:space="preserve">
+    <value>¡Error al descargar la imagen de superposición!</value>
+  </data>
+  <data name="Camera_permissionMessage" xml:space="preserve">
+    <value>MySkinSelfie requiere permisos de cámara para funcionar correctamente. ¡Por favor, habilite el acceso de la cámara la próxima vez!</value>
+  </data>
+  <data name="Camera_permissionNeeded" xml:space="preserve">
+    <value>¡Los permisos de la cámara son necesarios!</value>
+  </data>
+  <data name="OfflineModeWarning" xml:space="preserve">
+    <value>Modo sin conexión: se conecta para sincronizar los cambios</value>
+  </data>
+  <data name="Oops" xml:space="preserve">
+    <value>¡Vaya!</value>
+  </data>
+  <data name="PhotoCell_btnDeselect" xml:space="preserve">
+    <value>Deseleccionar</value>
+  </data>
+  <data name="PhotoCell_btnSelect" xml:space="preserve">
+    <value>Comparar</value>
+  </data>
+  <data name="UploadCell_btnDeselect" xml:space="preserve">
+    <value>Deseleccionar</value>
+  </data>
+  <data name="UploadCell_btnSelect" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="Trans_BodyPartsSkinRegions" xml:space="preserve">
+    <value>{'LanguageKey':'es','Translations':{'Head':'Cabeza','Neck':'Cuello','Torso':'Torso','Arm':'Brazo','Groin':'Ingle','Buttock':'Nalga','Leg':'Pierna','Full Face':'Cara completa','Left Side of Face':'Lado izquierdo de la cara','Right Side of Face':'Lado derecho de la cara','Back of Head':'Parte posterior de la cabeza','Top of Head':'Arriba de la cabeza','Front of Neck':'Frente del cuello','Back of Neck':'Atrás del cuello','Left Side of Neck':'Lado izquierdo del cuello','Right Side of Neck':'Lado derecho del cuello','Left Upper Arm':'Brazo superior izquierdo','Left Forearm':'Antebrazo izquierdo','Left Wrist':'Muñeca izquierda','Left Hand':'Mano izquierda','Right Upper Arm':'Brazo superior derecho','Right Forearm':'Antebrazo derecho','Right Wrist':'Muñeca derecha','Right Hand':'Mano derecha','Groin Area':'Área de la ingle','Left Thigh':'Muslo izquierdo','Left Back of Thigh':'Parte posterior del muslo izquierdo','Left Knee':'Rodilla izquierda','Left Shin':'Shin izquierdo','Left Calf':'Pantorrilla izquierda','Left Ankle':'Tobillo izquierdo','Left Foot':'Pie izquierdo','Right Thigh':'Muslo derecho','Right Back of Thigh':'Parte posterior del muslo derecho','Right Knee':'Rodilla derecha','Right Shin':'Espinilla derecha','Right Calf':'Pantorrilla derecha','Right Ankle':'Tobillo derecho','Right Foot':'Pie derecho','Chest':'Pecho','Stomach':'Estómago','Upper Back':'Superior de la espalda','Lower Back':'Espalda baja','Left Side':'Lado izquierdo','Left Shoulder':'Hombro izquierdo','Left Shoulder Blade':'Omóplato izquierdo','Right Side':'Lado derecho','Right Shoulder':'Hombro derecho','Right Shoulder Blade':'Omoplato derecho','Left Buttock':'Nalga izquierda','Right Buttock':'Nalgas derechas'}}</value>
+  </data>
+</root>

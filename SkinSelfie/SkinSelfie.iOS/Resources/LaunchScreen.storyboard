@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="gAE-YM-kbH">
+            <objects>
+                <viewController id="X5k-f2-b5h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8P-hJ-Z43"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                                <rect key="frame" x="270" y="270" width="60" height="60"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="0" green="0.75686274509803919" blue="0.84313725490196079" alpha="1"/>
+                        <constraints>
+                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
+                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
+                        </constraints>
+                        <color key="tintColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAI-xm-WK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="349" y="339"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="ic_add_circle_white_24dp.png" width="24" height="24"/>
+        <image name="ic_remove_circle_white_24dp.png" width="24" height="24"/>
+        <image name="ic_lock_outline_black_18dp.png" width="18" height="18"/>
+        <image name="TakePhotoButton.png" width="143" height="143"/>
+        <image name="ToggleCameraButton.png" width="136" height="104"/>
+        <image name="ic_done_white_24dp.png" width="24" height="24"/>
+        <image name="ic_done_white_24dp_2x.png" width="48" height="48"/>
+        <image name="ic_done_white_24dp_3x.png" width="72" height="72"/>
+        <image name="ic_create_white_24dp_2x.png" width="48" height="48"/>
+        <image name="ic_create_white_24dp.png" width="24" height="24"/>
+        <image name="ic_create_white_24dp_3x.png" width="72" height="72"/>
+        <image name="ic_share_black_18dp.png" width="18" height="18"/>
+        <image name="ic_share_black_18dp_2x.png" width="36" height="36"/>
+        <image name="ic_share_black_18dp_3x.png" width="54" height="54"/>
+        <image name="ic_create_new_folder_white_24dp.png" width="24" height="24"/>
+        <image name="ic_camera_alt_white_24dp.png" width="24" height="24"/>
+        <image name="ic_delete_2x.png" width="48" height="48"/>
+        <image name="ic_delete_3x.png" width="72" height="72"/>
+        <image name="ic_delete.png" width="24" height="24"/>
+        <image name="ic_mode_edit_2x.png" width="48" height="48"/>
+        <image name="ic_mode_edit_3x.png" width="72" height="72"/>
+        <image name="ic_mode_edit.png" width="24" height="24"/>
+        <image name="ic_settings_2x.png" width="48" height="48"/>
+        <image name="ic_settings_3x.png" width="72" height="72"/>
+        <image name="ic_settings.png" width="24" height="24"/>
+        <image name="Icon-Small-50.png" width="50" height="50"/>
+        <image name="Icon-40.png" width="40" height="40"/>
+        <image name="background.png" width="720" height="1280"/>
+        <image name="icon_badge.png" width="300" height="300"/>
+        <image name="ic_info_black_24dp.png" width="24" height="24"/>
+        <image name="Icon-57.png" width="57" height="57"/>
+        <image name="skinselfiestore.png" width="1024" height="1024"/>
+        <image name="skinselfiestoresmall.png" width="512" height="512"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="Default-568g.png" width="320" height="568"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+    </resources>
+    <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,662 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SkinSelfieDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BodyParts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EventLogs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Action" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Photos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="Treatment" Type="nvarchar(max)" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="PhotoDescription" Type="nvarchar(max)" />
+          <Property Name="Rating" Type="int" />
+          <Property Name="UserConditionId" Type="int" Nullable="false" />
+          <Property Name="ThumbUrl" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Shares">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="ExpireDate" Type="datetime" Nullable="false" />
+          <Property Name="OwnerId" Type="int" Nullable="false" />
+          <Property Name="SharedEmail" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ConditionId" Type="int" Nullable="false" />
+          <Property Name="Updated" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SkinRegions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BodyPartId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Studies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="ManagerId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StudyEnrolments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudyId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="Enrolled" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserConditions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SkinRegionId" Type="int" Nullable="false" />
+          <Property Name="OwnerId" Type="int" Nullable="false" />
+          <Property Name="Treatment" Type="nvarchar(max)" />
+          <Property Name="Condition" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="Passcode" Type="int" />
+          <Property Name="Finished" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="BirthDate" Type="datetime" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Admin" Type="bit" />
+        </EntityType>
+        <Association Name="FK_Photos_ToUserConditions">
+          <End Role="UserConditions" Type="Self.UserConditions" Multiplicity="1" />
+          <End Role="Photos" Type="Self.Photos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserConditions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="UserConditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shares_ToUserConditions">
+          <End Role="UserConditions" Type="Self.UserConditions" Multiplicity="1" />
+          <End Role="Shares" Type="Self.Shares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserConditions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Shares">
+              <PropertyRef Name="ConditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shares_ToUsersOwner">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Shares" Type="Self.Shares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Shares">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SkinRegions_ToBodyParts">
+          <End Role="BodyParts" Type="Self.BodyParts" Multiplicity="1" />
+          <End Role="SkinRegions" Type="Self.SkinRegions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BodyParts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SkinRegions">
+              <PropertyRef Name="BodyPartId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Studies_ToUsers">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Studies" Type="Self.Studies" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Studies">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudyEnrolments_ToStudies">
+          <End Role="Studies" Type="Self.Studies" Multiplicity="1" />
+          <End Role="StudyEnrolments" Type="Self.StudyEnrolments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Studies">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudyEnrolments">
+              <PropertyRef Name="StudyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudyEnrolments_ToUsers">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="StudyEnrolments" Type="Self.StudyEnrolments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudyEnrolments">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCondition_ToSkinRegions">
+          <End Role="SkinRegions" Type="Self.SkinRegions" Multiplicity="1" />
+          <End Role="UserConditions" Type="Self.UserConditions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SkinRegions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserConditions">
+              <PropertyRef Name="SkinRegionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCondition_ToUsers">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="UserConditions" Type="Self.UserConditions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserConditions">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SkinSelfieDBModelStoreContainer">
+          <EntitySet Name="BodyParts" EntityType="Self.BodyParts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventLogs" EntityType="Self.EventLogs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Photos" EntityType="Self.Photos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Shares" EntityType="Self.Shares" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SkinRegions" EntityType="Self.SkinRegions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Studies" EntityType="Self.Studies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudyEnrolments" EntityType="Self.StudyEnrolments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserConditions" EntityType="Self.UserConditions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Photos_ToUserConditions" Association="Self.FK_Photos_ToUserConditions">
+            <End Role="UserConditions" EntitySet="UserConditions" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shares_ToUserConditions" Association="Self.FK_Shares_ToUserConditions">
+            <End Role="UserConditions" EntitySet="UserConditions" />
+            <End Role="Shares" EntitySet="Shares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shares_ToUsersOwner" Association="Self.FK_Shares_ToUsersOwner">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Shares" EntitySet="Shares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SkinRegions_ToBodyParts" Association="Self.FK_SkinRegions_ToBodyParts">
+            <End Role="BodyParts" EntitySet="BodyParts" />
+            <End Role="SkinRegions" EntitySet="SkinRegions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Studies_ToUsers" Association="Self.FK_Studies_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Studies" EntitySet="Studies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudyEnrolments_ToStudies" Association="Self.FK_StudyEnrolments_ToStudies">
+            <End Role="Studies" EntitySet="Studies" />
+            <End Role="StudyEnrolments" EntitySet="StudyEnrolments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudyEnrolments_ToUsers" Association="Self.FK_StudyEnrolments_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="StudyEnrolments" EntitySet="StudyEnrolments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCondition_ToSkinRegions" Association="Self.FK_UserCondition_ToSkinRegions">
+            <End Role="SkinRegions" EntitySet="SkinRegions" />
+            <End Role="UserConditions" EntitySet="UserConditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCondition_ToUsers" Association="Self.FK_UserCondition_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserConditions" EntitySet="UserConditions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SkinSelfieDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BodyPart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="SkinRegions" Relationship="Self.FK_SkinRegions_ToBodyParts" FromRole="BodyParts" ToRole="SkinRegions" />
+        </EntityType>
+        <EntityType Name="EventLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Action" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Photo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Treatment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhotoDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Rating" Type="Int32" />
+          <Property Name="UserConditionId" Type="Int32" Nullable="false" />
+          <Property Name="ThumbUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="UserCondition" Relationship="Self.FK_Photos_ToUserConditions" FromRole="Photos" ToRole="UserConditions" />
+        </EntityType>
+        <EntityType Name="Share">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ExpireDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="OwnerId" Type="Int32" Nullable="false" />
+          <Property Name="SharedEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ConditionId" Type="Int32" Nullable="false" />
+          <Property Name="Updated" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserCondition" Relationship="Self.FK_Shares_ToUserConditions" FromRole="Shares" ToRole="UserConditions" />
+          <NavigationProperty Name="Owner" Relationship="Self.FK_Shares_ToUsersOwner" FromRole="Shares" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="SkinRegion">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BodyPartId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BodyPart" Relationship="Self.FK_SkinRegions_ToBodyParts" FromRole="SkinRegions" ToRole="BodyParts" />
+          <NavigationProperty Name="UserConditions" Relationship="Self.FK_UserCondition_ToSkinRegions" FromRole="SkinRegions" ToRole="UserConditions" />
+        </EntityType>
+        <EntityType Name="UserCondition">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SkinRegionId" Type="Int32" Nullable="false" />
+          <Property Name="OwnerId" Type="Int32" Nullable="false" />
+          <Property Name="Treatment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Condition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Passcode" Type="Int32" />
+          <Property Name="Finished" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Photos" Relationship="Self.FK_Photos_ToUserConditions" FromRole="UserConditions" ToRole="Photos" />
+          <NavigationProperty Name="Shares" Relationship="Self.FK_Shares_ToUserConditions" FromRole="UserConditions" ToRole="Shares" />
+          <NavigationProperty Name="SkinRegion" Relationship="Self.FK_UserCondition_ToSkinRegions" FromRole="UserConditions" ToRole="SkinRegions" />
+          <NavigationProperty Name="Owner" Relationship="Self.FK_UserCondition_ToUsers" FromRole="UserConditions" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Shares" Relationship="Self.FK_Shares_ToUsersOwner" FromRole="Users" ToRole="Shares" />
+          <NavigationProperty Name="UserConditions" Relationship="Self.FK_UserCondition_ToUsers" FromRole="Users" ToRole="UserConditions" />
+          <NavigationProperty Name="ManagedStudies" Relationship="SkinSelfieDBModel.FK_Studies_ToUsers" FromRole="User" ToRole="Study" />
+          <NavigationProperty Name="StudyEnrolments" Relationship="SkinSelfieDBModel.FK_StudyEnrolments_ToUsers" FromRole="User" ToRole="StudyEnrolment" />
+          <Property Name="Admin" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK_SkinRegions_ToBodyParts">
+          <End Role="BodyParts" Type="Self.BodyPart" Multiplicity="1" />
+          <End Role="SkinRegions" Type="Self.SkinRegion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BodyParts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SkinRegions">
+              <PropertyRef Name="BodyPartId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Photos_ToUserConditions">
+          <End Role="UserConditions" Type="Self.UserCondition" Multiplicity="1" />
+          <End Role="Photos" Type="Self.Photo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserConditions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Photos">
+              <PropertyRef Name="UserConditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shares_ToUserConditions">
+          <End Role="UserConditions" Type="Self.UserCondition" Multiplicity="1" />
+          <End Role="Shares" Type="Self.Share" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserConditions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Shares">
+              <PropertyRef Name="ConditionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Shares_ToUsersOwner">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="Shares" Type="Self.Share" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Shares">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCondition_ToSkinRegions">
+          <End Role="SkinRegions" Type="Self.SkinRegion" Multiplicity="1" />
+          <End Role="UserConditions" Type="Self.UserCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SkinRegions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserConditions">
+              <PropertyRef Name="SkinRegionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserCondition_ToUsers">
+          <End Role="Users" Type="Self.User" Multiplicity="1" />
+          <End Role="UserConditions" Type="Self.UserCondition" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserConditions">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SkinSelfieDB" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BodyParts" EntityType="Self.BodyPart" />
+          <EntitySet Name="EventLogs" EntityType="Self.EventLog" />
+          <EntitySet Name="Photos" EntityType="Self.Photo" />
+          <EntitySet Name="Shares" EntityType="Self.Share" />
+          <EntitySet Name="SkinRegions" EntityType="Self.SkinRegion" />
+          <EntitySet Name="UserConditions" EntityType="Self.UserCondition" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_SkinRegions_ToBodyParts" Association="Self.FK_SkinRegions_ToBodyParts">
+            <End Role="BodyParts" EntitySet="BodyParts" />
+            <End Role="SkinRegions" EntitySet="SkinRegions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Photos_ToUserConditions" Association="Self.FK_Photos_ToUserConditions">
+            <End Role="UserConditions" EntitySet="UserConditions" />
+            <End Role="Photos" EntitySet="Photos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shares_ToUserConditions" Association="Self.FK_Shares_ToUserConditions">
+            <End Role="UserConditions" EntitySet="UserConditions" />
+            <End Role="Shares" EntitySet="Shares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Shares_ToUsersOwner" Association="Self.FK_Shares_ToUsersOwner">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Shares" EntitySet="Shares" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCondition_ToSkinRegions" Association="Self.FK_UserCondition_ToSkinRegions">
+            <End Role="SkinRegions" EntitySet="SkinRegions" />
+            <End Role="UserConditions" EntitySet="UserConditions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserCondition_ToUsers" Association="Self.FK_UserCondition_ToUsers">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="UserConditions" EntitySet="UserConditions" />
+          </AssociationSet>
+          <EntitySet Name="Studies" EntityType="SkinSelfieDBModel.Study" />
+          <EntitySet Name="StudyEnrolments" EntityType="SkinSelfieDBModel.StudyEnrolment" />
+          <AssociationSet Name="FK_Studies_ToUsers" Association="SkinSelfieDBModel.FK_Studies_ToUsers">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Study" EntitySet="Studies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudyEnrolments_ToStudies" Association="SkinSelfieDBModel.FK_StudyEnrolments_ToStudies">
+            <End Role="Study" EntitySet="Studies" />
+            <End Role="StudyEnrolment" EntitySet="StudyEnrolments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudyEnrolments_ToUsers" Association="SkinSelfieDBModel.FK_StudyEnrolments_ToUsers">
+            <End Role="User" EntitySet="Users" />
+            <End Role="StudyEnrolment" EntitySet="StudyEnrolments" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Study">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ManagerId" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Manager" Relationship="SkinSelfieDBModel.FK_Studies_ToUsers" FromRole="Study" ToRole="User" />
+          <NavigationProperty Name="StudyEnrolments" Relationship="SkinSelfieDBModel.FK_StudyEnrolments_ToStudies" FromRole="Study" ToRole="StudyEnrolment" />
+        </EntityType>
+        <EntityType Name="StudyEnrolment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StudyId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Enrolled" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Study" Relationship="SkinSelfieDBModel.FK_StudyEnrolments_ToStudies" FromRole="StudyEnrolment" ToRole="Study" />
+          <NavigationProperty Name="User" Relationship="SkinSelfieDBModel.FK_StudyEnrolments_ToUsers" FromRole="StudyEnrolment" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Studies_ToUsers">
+          <End Type="SkinSelfieDBModel.User" Role="User" Multiplicity="1" />
+          <End Type="SkinSelfieDBModel.Study" Role="Study" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Study">
+              <PropertyRef Name="ManagerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudyEnrolments_ToStudies">
+          <End Type="SkinSelfieDBModel.Study" Role="Study" Multiplicity="1" >
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="SkinSelfieDBModel.StudyEnrolment" Role="StudyEnrolment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Study">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudyEnrolment">
+              <PropertyRef Name="StudyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudyEnrolments_ToUsers">
+          <End Type="SkinSelfieDBModel.User" Role="User" Multiplicity="1" />
+          <End Type="SkinSelfieDBModel.StudyEnrolment" Role="StudyEnrolment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StudyEnrolment">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SkinSelfieDBModelStoreContainer" CdmEntityContainer="SkinSelfieDB">
+          <EntitySetMapping Name="BodyParts">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.BodyPart">
+              <MappingFragment StoreEntitySet="BodyParts">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventLogs">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.EventLog">
+              <MappingFragment StoreEntitySet="EventLogs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Photos">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.Photo">
+              <MappingFragment StoreEntitySet="Photos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Treatment" ColumnName="Treatment" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="PhotoDescription" ColumnName="PhotoDescription" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="UserConditionId" ColumnName="UserConditionId" />
+                <ScalarProperty Name="ThumbUrl" ColumnName="ThumbUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shares">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.Share">
+              <MappingFragment StoreEntitySet="Shares">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="SharedEmail" ColumnName="SharedEmail" />
+                <ScalarProperty Name="ConditionId" ColumnName="ConditionId" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SkinRegions">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.SkinRegion">
+              <MappingFragment StoreEntitySet="SkinRegions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BodyPartId" ColumnName="BodyPartId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserConditions">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.UserCondition">
+              <MappingFragment StoreEntitySet="UserConditions">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SkinRegionId" ColumnName="SkinRegionId" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="Treatment" ColumnName="Treatment" />
+                <ScalarProperty Name="Condition" ColumnName="Condition" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="Passcode" ColumnName="Passcode" />
+                <ScalarProperty Name="Finished" ColumnName="Finished" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Admin" ColumnName="Admin" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Studies">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.Study">
+              <MappingFragment StoreEntitySet="Studies">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ManagerId" ColumnName="ManagerId" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudyEnrolments">
+            <EntityTypeMapping TypeName="SkinSelfieDBModel.StudyEnrolment">
+              <MappingFragment StoreEntitySet="StudyEnrolments">
+                <ScalarProperty Name="Enrolled" ColumnName="Enrolled" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="StudyId" ColumnName="StudyId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

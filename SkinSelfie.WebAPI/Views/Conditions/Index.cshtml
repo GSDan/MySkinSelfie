@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SkinSelfie.WebAPI.Models.Photo>
+
+@{
+    ViewBag.Title = ViewData["Title"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string baseUrl = HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority) + Url.Content("~/");
+}
+
+<h2>@ViewBag.Title</h2>
+
+<ul>
+    @foreach (var photo in Model.OrderByDescending(p => p.CreatedAt))
+    {
+        <li>
+            <a href="@Url.Action("download", "Conditions", new { imageId = photo.Id, thumb = false })">
+                <img src="@Url.Action("download","Conditions", new { imageId = photo.Id, thumb = true })"/>
+             </a>
+            <p>@photo.CreatedAt.ToShortDateString()</p>
+            @if(!string.IsNullOrWhiteSpace(photo.Notes))
+            {
+                <p>@photo.Notes</p>
+            }
+        </li>
+    }
+</ul>
+    

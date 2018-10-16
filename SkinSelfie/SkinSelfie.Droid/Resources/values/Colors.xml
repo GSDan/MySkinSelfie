@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <color name="appMain">#00BCD4</color>
+  <color name="appDark">#009eb3</color>
+  <color name="appDarkest">#400B03</color>
+  <color name="appHighlight">#EB7060</color>
+  <color name="lighterHighlight">#E8A097</color>
+  <color name="appTitle">#BA4232</color>
+  <color name="appDull">#BD3F2F</color>
+</resources>

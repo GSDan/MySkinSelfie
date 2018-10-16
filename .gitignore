@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Confidential!
+**Web.config
+**ConfidentialData.cs
+
 # User-specific files
 *.suo
 *.user
@@ -23,6 +27,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+*.apk
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

@@ -1,0 +1,74 @@
+﻿@model IEnumerable<SkinSelfie.WebAPI.Models.Share>
+@using SkinSelfie.WebAPI.Models;
+
+@{
+    ViewBag.Title = "Shared With Me";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Owner
+        </th>
+        <th>
+            Condition
+        </th>
+        <th>
+            Access Expires
+        </th>
+        <th>
+            Last Updated
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        Photo lastPhoto = item.UserCondition.Photos.OrderByDescending(p => p.CreatedAt).FirstOrDefault();
+
+        if (item.Updated)
+        {
+            @:<tr style="background-color: #7fef93;">
+        }
+        else
+        {
+            @:<tr>
+        }
+        <td>
+            <a href="@Url.Action("Index", "Conditions", new { Id = item.UserCondition.Id })" style="display: block;">
+                @Html.DisplayFor(modelItem => item.Owner.Name)
+            </a>
+        </td>
+        <td>
+            <a href="@Url.Action("Index", "Conditions", new { Id = item.UserCondition.Id })" style="display: block;">
+                @Html.DisplayFor(modelItem => item.UserCondition.Condition)
+            </a>
+        </td>
+        <td>
+            <a href="@Url.Action("Index", "Conditions", new { Id = item.UserCondition.Id })" style="display: block;">
+                @item.ExpireDate.ToShortDateString()
+            </a>
+        </td>
+
+        if (lastPhoto != null)
+        {
+            <td>
+                <a href="@Url.Action("Index", "Conditions", new { Id = item.UserCondition.Id })" style="display: block;">
+                    @lastPhoto.CreatedAt.ToShortDateString()
+                </a>
+            </td>
+        }
+        else
+        {
+            <td>
+                <a href="@Url.Action("Index", "Conditions", new { Id = item.UserCondition.Id })" style="display: block;">
+                    No Photos
+                </a>
+            </td>
+        }
+        @:</tr>
+    }
+
+</table>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" package="skinselfie.droid" android:versionName="2.1.2" android:versionCode="8">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="24" />
+	<application android:theme="@style/Theme.SkinSelfie" android:label="MySkinSelfie" android:icon="@drawable/icon"></application>
+	<uses-feature android:name="android.hardware.camera" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+</manifest>
