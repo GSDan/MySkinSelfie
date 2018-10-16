@@ -33,11 +33,9 @@ All uploaded files are encrypted, meaning that you can be safe in the knowledge 
 > MySkinSelfie is a research collaboration between Open Lab and the NHS.<br>It is free to use under the MIT License, a copy of which can be found in this repository.
 
 <p align="center">
-	<img src="http://www.myskinselfie.com/static/img/NUTH.png" height="45" align="center">
-	<img src="http://www.collectionsdivetwmuseums.org.uk/img/logos/ncl-light.jpeg" height="70" align="center">
-	<br/>
-	<br/>
-	<img src="http://indigomultimedia.com/wp-content/uploads/2016/11/dc-dark.svg" height="100" align="center">
-	<img src="http://s3.amazonaws.com/libapps/accounts/21667/images/epsrc-lowres.jpg" height="60" align="center">
+	<img src="http://www.myskinselfie.com/static/img/NUTH.png" height="35" align="center">
+	<img src="http://www.collectionsdivetwmuseums.org.uk/img/logos/ncl-light.jpeg" height="45" align="center">
+	<img src="http://indigomultimedia.com/wp-content/uploads/2016/11/dc-dark.svg" height="75" align="center">
+	<img src="http://s3.amazonaws.com/libapps/accounts/21667/images/epsrc-lowres.jpg" height="50" align="center">
 	
 </p>
